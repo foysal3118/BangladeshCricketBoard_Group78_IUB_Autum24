@@ -15,30 +15,30 @@
          <children>
             <ImageView fitHeight="127.0" fitWidth="146.0" layoutX="169.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Image/BCBlogo.jpg" />
+                  <Image url="@LoginImageView/BcbLogo.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="123.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Image/user-account.png" />
+                  <Image url="@LoginImageView/user-account.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="122.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Image/Key.png" />
+                  <Image url="@LoginImageView/Key.png" />
                </image>
             </ImageView>
-            <TextField layoutX="160.0" layoutY="295.0" promptText="User ID" style="-fx-background-color: transparant; -fx-border-color: #1B5E20; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="LogInUserIDTextField" layoutX="160.0" layoutY="295.0" promptText="User ID" style="-fx-background-color: transparant; -fx-border-color: #1B5E20; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Arial" size="13.0" />
                </font>
             </TextField>
-            <TextField layoutX="161.0" layoutY="347.0" promptText="Password" style="-fx-background-color: transparant; -fx-border-color: #1B5E20; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="LogInUserPasswordTestField" layoutX="161.0" layoutY="347.0" promptText="Password" style="-fx-background-color: transparant; -fx-border-color: #1B5E20; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Arial" size="13.0" />
                </font>
             </TextField>
-            <Button layoutX="148.0" layoutY="429.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="164.0" style="-fx-background-color: #D50000; -fx-background-radius: 20px;" text="Sign in" textFill="WHITE">
+            <Button layoutX="148.0" layoutY="429.0" mnemonicParsing="false" onAction="#LogInSignInButtonOnAction" prefHeight="39.0" prefWidth="164.0" style="-fx-background-color: #D50000; -fx-background-radius: 20px;" text="Sign in" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="17.0" />
                </font>
@@ -51,12 +51,12 @@
             </Label>
             <Line endX="-2.0" layoutX="430.0" layoutY="496.0" startX="-177.0" />
             <Line endX="73.0" layoutX="137.0" layoutY="496.0" startX="-118.0" />
-            <Button alignment="CENTER" layoutX="263.0" layoutY="523.0" mnemonicParsing="false" style="-fx-background-color: transparant;" text="Sign up" textFill="#a15a03">
+            <Button alignment="CENTER" layoutX="263.0" layoutY="523.0" mnemonicParsing="false" onAction="#LogInNewSignUpButtonOnAction" style="-fx-background-color: transparant;" text="Sign up" textFill="#a15a03">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" layoutX="222.0" layoutY="376.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="115.0" style="-fx-background-color: transparant;" text="Forgot Password?" textFill="#546e7a">
+            <Button alignment="CENTER" layoutX="222.0" layoutY="376.0" mnemonicParsing="false" onAction="#LogInForgotPasswordButtonOnAction" prefHeight="23.0" prefWidth="115.0" style="-fx-background-color: transparant;" text="Forgot Password?" textFill="#546e7a">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
