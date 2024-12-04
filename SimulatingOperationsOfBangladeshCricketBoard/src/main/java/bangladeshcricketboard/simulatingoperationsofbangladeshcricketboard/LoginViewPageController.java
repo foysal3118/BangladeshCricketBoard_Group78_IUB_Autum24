@@ -1,6 +1,7 @@
 package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class LoginViewPageController
@@ -8,7 +9,7 @@ public class LoginViewPageController
     @javafx.fxml.FXML
     private TextField LogInUserIDTextField;
     @javafx.fxml.FXML
-    private TextField LogInUserPasswordTestField;
+    private PasswordField LogInUserIDPasswordField;
 
     @javafx.fxml.FXML
     public void initialize() {
