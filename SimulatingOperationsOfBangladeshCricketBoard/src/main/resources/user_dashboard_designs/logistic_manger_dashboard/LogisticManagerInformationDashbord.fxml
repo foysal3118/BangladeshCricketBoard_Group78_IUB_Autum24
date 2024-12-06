@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="563.0" prefWidth="447.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView layoutX="39.0" layoutY="120.0" prefHeight="380.0" prefWidth="370.0" style="-fx-background-color: transparent;">
+              <columns>
+                <TableColumn prefWidth="89.33331298828125" text="Matches" />
+                <TableColumn prefWidth="174.00003051757812" text="Location" />
+                  <TableColumn prefWidth="105.33334350585938" text="Date" />
+              </columns>
+            </TableView>
+            <TextField fx:id="searchTextField" layoutX="39.0" layoutY="77.0" prefHeight="28.0" prefWidth="165.0" promptText="Search" style="-fx-background-radius: 20; -fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="175.0" layoutY="81.0" onMouseClicked="#searchOnMouseClick" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+               <image>
+                  <Image url="@magnifying-glass.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="256.0" layoutY="80.0" text="Filter:">
+               <font>
+                  <Font name="Candara" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="307.0" layoutY="78.0" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="35.0" layoutY="22.0" text="Information" textFill="#1a237e">
+               <font>
+                  <Font name="Candara Bold" size="25.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="21.0" layoutY="181.0" prefHeight="115.0" prefWidth="157.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color green="0.3019607961177826" blue="0.250980406999588" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="51.0" prefHeight="49.0" prefWidth="121.0" text="Transportation details" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Candara" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="51.0" fitWidth="42.0" layoutX="60.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@LogisticManagerDashboard_images/bus2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="21.0" layoutY="67.0" prefHeight="95.0" prefWidth="157.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color green="0.3019607961177826" blue="0.250980406999588" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label alignment="CENTER" layoutX="32.0" layoutY="55.0" prefHeight="29.0" prefWidth="98.0" text="Match Dates" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Candara" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="51.0" fitWidth="42.0" layoutX="60.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@LogisticManagerDashboard_images/deadline.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="21.0" layoutY="318.0" prefHeight="95.0" prefWidth="157.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color green="0.3019607961177826" blue="0.250980406999588" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label alignment="CENTER" layoutX="23.0" layoutY="55.0" prefHeight="29.0" prefWidth="115.0" text="Manage Venue" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Candara" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="51.0" fitWidth="42.0" layoutX="60.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@LogisticManagerDashboard_images/stadium.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="21.0" layoutY="435.0" prefHeight="95.0" prefWidth="157.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color green="0.3019607961177826" blue="0.250980406999588" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label alignment="CENTER" layoutX="26.0" layoutY="55.0" prefHeight="29.0" prefWidth="105.0" text="History" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Candara" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="51.0" fitWidth="42.0" layoutX="60.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@LogisticManagerDashboard_images/clock.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

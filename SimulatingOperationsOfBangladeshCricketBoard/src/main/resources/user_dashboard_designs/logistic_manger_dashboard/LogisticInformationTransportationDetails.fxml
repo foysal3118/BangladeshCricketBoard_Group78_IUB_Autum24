@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="41.0" layoutY="40.0" text="Vehicle details:">
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="75.0" text="Coach No:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="173.0" layoutY="73.0" prefHeight="27.0" prefWidth="165.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <RadioButton layoutX="74.0" layoutY="122.0" mnemonicParsing="false" text="AC">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="140.0" layoutY="122.0" mnemonicParsing="false" text="Non-AC">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="50.0" layoutY="172.0" text="Schedule details:">
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="213.0" text="departure time:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="213.0" layoutY="210.0" prefHeight="27.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <Label layoutX="82.0" layoutY="271.0" text="departure Date:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="213.0" layoutY="269.0" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <Label layoutX="56.0" layoutY="322.0" text="Vanue details:">
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="84.0" layoutY="358.0" text="Location:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="177.0" layoutY="356.0" prefHeight="27.0" prefWidth="165.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <Label layoutX="84.0" layoutY="405.0" text="Stadium:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="177.0" layoutY="403.0" prefHeight="27.0" prefWidth="165.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <Button layoutX="203.0" layoutY="459.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="77.0" style="-fx-background-color: #004D40; -fx-background-radius: 20px;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="119.0" layoutY="501.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="245.0" style="-fx-background-color: #800000; -fx-background-radius: 20px;" text="Send to Team Manage" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="221.0" layoutY="18.0" text="Select ID:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="304.0" layoutY="16.0" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+   </children>
+</AnchorPane>
