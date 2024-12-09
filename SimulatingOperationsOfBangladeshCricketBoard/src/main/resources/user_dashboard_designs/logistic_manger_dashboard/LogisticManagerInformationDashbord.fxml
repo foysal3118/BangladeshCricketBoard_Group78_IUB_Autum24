@@ -13,7 +13,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="logisticInformationBorderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogisticManagerInformationDashbordController">
    <center>
       <AnchorPane prefHeight="563.0" prefWidth="447.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
@@ -31,7 +31,7 @@
             </TextField>
             <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="175.0" layoutY="81.0" onMouseClicked="#searchOnMouseClick" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                <image>
-                  <Image url="@magnifying-glass.png" />
+                  <Image url="@LogisticManagerDashboard_images/magnifying-glass.png" />
                </image>
             </ImageView>
             <Label layoutX="256.0" layoutY="80.0" text="Filter:">
@@ -39,7 +39,7 @@
                   <Font name="Candara" size="18.0" />
                </font>
             </Label>
-            <ComboBox layoutX="307.0" layoutY="78.0" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+            <ComboBox layoutX="307.0" layoutY="78.0" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0; -fx-cursor: hand;" />
          </children>
       </AnchorPane>
    </center>
@@ -51,7 +51,7 @@
                   <Font name="Candara Bold" size="25.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="21.0" layoutY="181.0" prefHeight="115.0" prefWidth="157.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="21.0" layoutY="181.0" onMouseClicked="#transportationDetailsOnMouseClick" prefHeight="115.0" prefWidth="157.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -60,7 +60,7 @@
                   </DropShadow>
                </effect>
                <children>
-                  <Label alignment="CENTER" layoutX="18.0" layoutY="51.0" prefHeight="49.0" prefWidth="121.0" text="Transportation details" textAlignment="CENTER" wrapText="true">
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="51.0" prefHeight="49.0" prefWidth="121.0" text="Transportation Details" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font name="Candara" size="18.0" />
                      </font>
@@ -72,7 +72,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="21.0" layoutY="67.0" prefHeight="95.0" prefWidth="157.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="21.0" layoutY="67.0" onMouseClicked="#matchDatesOnMouseClick" prefHeight="95.0" prefWidth="157.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -93,7 +93,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="21.0" layoutY="318.0" prefHeight="95.0" prefWidth="157.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="21.0" layoutY="318.0" onMouseClicked="#manageVenueOnMouseClick" prefHeight="95.0" prefWidth="157.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -114,7 +114,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="21.0" layoutY="435.0" prefHeight="95.0" prefWidth="157.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="21.0" layoutY="435.0" onMouseClicked="#historyOnMouseClick" prefHeight="95.0" prefWidth="157.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>

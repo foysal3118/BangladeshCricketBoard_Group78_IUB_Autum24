@@ -12,16 +12,16 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="LogisticFinanceBorderpan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogisticManagerFinanceDashbordController">
    <right>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="61.0" layoutY="29.0" text="Finance" textFill="#1a237e">
                <font>
-                  <Font name="Candara" size="25.0" />
+                  <Font name="Candara Bold" size="25.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="17.0" layoutY="84.0" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+            <AnchorPane layoutX="17.0" layoutY="84.0" onMouseClicked="#budgetRequestOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -42,7 +42,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="17.0" layoutY="199.0" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+            <AnchorPane layoutX="17.0" layoutY="199.0" onMouseClicked="#requestStatusOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -63,7 +63,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="17.0" layoutY="430.0" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+            <AnchorPane layoutX="17.0" layoutY="430.0" onMouseClicked="#viewRequestsOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -84,7 +84,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="17.0" layoutY="313.0" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+            <AnchorPane layoutX="17.0" layoutY="313.0" onMouseClicked="#costReportOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -109,7 +109,7 @@
       </AnchorPane>
    </right>
    <center>
-      <AnchorPane prefHeight="563.0" prefWidth="447.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="37.0" layoutY="79.0" text="Description:">
                <font>
@@ -117,13 +117,13 @@
                </font>
             </Label>
             <TextArea layoutX="37.0" layoutY="114.0" prefHeight="145.0" prefWidth="380.0" />
-            <Button layoutX="37.0" layoutY="282.0" mnemonicParsing="false" style="-fx-background-color: #004D40; -fx-background-radius: 20px;" text="Choose a File" textFill="WHITE" />
+            <Button layoutX="37.0" layoutY="282.0" mnemonicParsing="false" onAction="#chooseFileOnActionButton" style="-fx-background-color: #004D40; -fx-background-radius: 20px; -fx-cursor: hand;" text="Choose a File" textFill="WHITE" />
             <Label layoutX="138.0" layoutY="286.0" text="File.pdf*">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Button layoutX="155.0" layoutY="418.0" mnemonicParsing="false" style="-fx-background-color: #1A237E; -fx-background-radius: 20px;" text="Update Budget" textFill="WHITE">
+            <Button layoutX="155.0" layoutY="418.0" mnemonicParsing="false" onAction="#updateBudgetOnActionButton" style="-fx-background-color: #1A237E; -fx-background-radius: 20px; -fx-cursor: hand;" text="Update Budget" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -133,8 +133,8 @@
                   <Font name="Candara" size="18.0" />
                </font>
             </Label>
-            <ComboBox layoutX="308.0" layoutY="77.0" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
-            <Button layoutX="160.0" layoutY="355.0" mnemonicParsing="false" style="-fx-background-color: #800000; -fx-background-radius: 20px;" text="Send Request" textFill="WHITE">
+            <ComboBox layoutX="308.0" layoutY="77.0" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0; -fx-cursor: hand;" />
+            <Button layoutX="160.0" layoutY="355.0" mnemonicParsing="false" onAction="#sendRequestOnActionButton" style="-fx-background-color: #800000; -fx-background-radius: 20px; -fx-cursor: hand;" text="Send Request" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>

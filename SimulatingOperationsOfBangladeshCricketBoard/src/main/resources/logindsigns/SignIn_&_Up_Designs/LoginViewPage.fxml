@@ -34,7 +34,7 @@
                   <Font name="Arial Bold" size="13.0" />
                </font>
             </TextField>
-            <Button layoutX="148.0" layoutY="429.0" mnemonicParsing="false" onAction="#LogInSignInButtonOnAction" prefHeight="39.0" prefWidth="164.0" style="-fx-background-color: #D50000; -fx-background-radius: 20px;" text="Sign in" textFill="WHITE">
+            <Button layoutX="148.0" layoutY="429.0" mnemonicParsing="false" onAction="#LogInSignInButtonOnAction" prefHeight="39.0" prefWidth="164.0" style="-fx-background-color: #D50000; -fx-background-radius: 20px; -fx-cursor: hand;" text="Sign in" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="17.0" />
                </font>
@@ -47,12 +47,12 @@
             </Label>
             <Line endX="-2.0" layoutX="430.0" layoutY="496.0" startX="-177.0" />
             <Line endX="73.0" layoutX="137.0" layoutY="496.0" startX="-118.0" />
-            <Button alignment="CENTER" layoutX="263.0" layoutY="523.0" mnemonicParsing="false" onAction="#LogInNewSignUpButtonOnAction" style="-fx-background-color: transparant;" text="Sign up" textFill="#a15a03">
+            <Button alignment="CENTER" layoutX="263.0" layoutY="523.0" mnemonicParsing="false" onAction="#LogInNewSignUpButtonOnAction" style="-fx-background-color: transparant; -fx-cursor: hand;" text="Sign up" textFill="#a15a03">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" layoutX="218.0" layoutY="376.0" mnemonicParsing="false" onAction="#LogInForgotPasswordButtonOnAction" prefHeight="23.0" prefWidth="115.0" style="-fx-background-color: transparant;" text="Forgot Password?" textFill="#546e7a">
+            <Button alignment="CENTER" layoutX="218.0" layoutY="376.0" mnemonicParsing="false" onAction="#LogInForgotPasswordButtonOnAction" prefHeight="23.0" prefWidth="115.0" style="-fx-background-color: transparant; -fx-cursor: hand;" text="Forgot Password?" textFill="#546e7a">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
@@ -69,5 +69,15 @@
             </PasswordField>
          </children>
       </AnchorPane>
+      <Button layoutX="977.0" layoutY="1.0" mnemonicParsing="false" onAction="#LoginPageCloseButtonOnAction" style="-fx-background-color: transparent; -fx-cursor: hand;" text="X" textFill="#ee3232">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="951.0" mnemonicParsing="false" onAction="#LoginPageMinimizeButtonOnAction" style="-fx-background-color: transparent; -fx-cursor: hand;" text="_">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

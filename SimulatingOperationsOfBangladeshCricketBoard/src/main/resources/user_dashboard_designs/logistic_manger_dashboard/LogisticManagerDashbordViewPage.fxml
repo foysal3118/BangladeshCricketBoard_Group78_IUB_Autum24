@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogisticManagerDashbordViewPageController">
+<BorderPane fx:id="LogisticManagerDashbordBorderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1016.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogisticManagerDashbordViewPageController">
    <top>
       <AnchorPane prefHeight="78.0" prefWidth="900.0" style="-fx-background-color: #004D40;" BorderPane.alignment="CENTER">
          <children>
@@ -178,7 +178,7 @@
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane prefHeight="563.0" prefWidth="647.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="logisticManagerHomeDashbordBorderpane" prefHeight="563.0" prefWidth="647.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="61.0" layoutY="22.0" text="Overview" textFill="#1a237e">
                <font>
@@ -336,7 +336,4 @@
             </AnchorPane>
          </children></AnchorPane>
    </center>
-   <right>
-      <AnchorPane prefHeight="563.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
-   </right>
 </BorderPane>

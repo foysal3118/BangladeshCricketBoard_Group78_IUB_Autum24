@@ -1,18 +1,32 @@
 package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager;
 
+import java.io.IOException;
+
+import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.BcbMainApplicationClass;
+import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.LoginViewPageController;
+import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.MouseDragClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 
 
 public class LogisticManagerDashbordViewPageController {
+    
+    @FXML
+    private BorderPane LogisticManagerDashbordBorderpane;
 
     @FXML
     private AnchorPane accountSettingsSideBar;
@@ -214,37 +228,63 @@ public class LogisticManagerDashbordViewPageController {
 
     @FXML
     void accountSettingOnMouseClick(MouseEvent event) {
-
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/logistic_manger_dashboard/LogisticManagerSettingsDashbord.fxml"));
+            LogisticManagerDashbordBorderpane.setCenter(fxmlLoader.load());
+        } catch (IOException e) {}
     }
 
     @FXML
     void feedbackOnMouseClick(MouseEvent event) {
-
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/logistic_manger_dashboard/LogisticManagerFeedbackDashbord.fxml"));
+            LogisticManagerDashbordBorderpane.setCenter(fxmlLoader.load());
+        } catch (IOException e) {}
     }
 
     @FXML
     void financeOnMouseClick(MouseEvent event) {
-
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/logistic_manger_dashboard/LogisticManagerFinanceDashbord.fxml"));
+            LogisticManagerDashbordBorderpane.setCenter(fxmlLoader.load());
+        } catch (IOException e) {}
     }
 
     @FXML
     void homeOnMouseClick(MouseEvent event) {
-
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/logistic_manger_dashboard/LogisticManagerDashbordHomepage.fxml"));
+            LogisticManagerDashbordBorderpane.setCenter(fxmlLoader.load());
+        } catch (IOException e) {}
     }
 
     @FXML
     void informationOnMouseClick(MouseEvent event) {
-
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/logistic_manger_dashboard/LogisticManagerInformationDashbord.fxml"));
+            LogisticManagerDashbordBorderpane.setCenter(fxmlLoader.load());
+        } catch (IOException e) {}
     }
 
     @FXML
     void inventoryOnMouseClick(MouseEvent event) {
-
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/logistic_manger_dashboard/LogisticManagerInventoryDashbord.fxml"));
+            LogisticManagerDashbordBorderpane.setCenter(fxmlLoader.load());
+        } catch (IOException e) {}
     }
 
     @FXML
     void logOutOnMouseClick(MouseEvent event) {
-
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/logindsigns/SignIn_&_Up_Designs/LoginViewPage.fxml"));
+            Parent root = fxmlLoader.load();
+            Scene scene = new Scene(root);
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            MouseDragClass.setStageAndSetupDrag(stage, root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {}
     }
 
     @FXML
@@ -254,7 +294,8 @@ public class LogisticManagerDashbordViewPageController {
 
     @FXML
     void minimizeOnAction(ActionEvent event) {
-
+        Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
     }
 
     @FXML

@@ -13,11 +13,11 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="LogisticInventoryBorderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogisticManagerInventoryDashbordController">
    <right>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane layoutX="20.0" layoutY="219.0" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="20.0" layoutY="219.0" onMouseClicked="#inventoryAddItemsOnMouseClick" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
                <children>
                   <Label layoutX="42.0" layoutY="87.0" text="Add Items">
                      <font>
@@ -43,7 +43,7 @@
                   <Font name="Candara Bold" size="25.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="20.0" layoutY="65.0" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="20.0" layoutY="65.0" onMouseClicked="#inventoryShowAllItemsOnMouseClick" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
                <children>
                   <Label layoutX="18.0" layoutY="87.0" text="Show All Items">
                      <font>
@@ -64,7 +64,7 @@
                   </DropShadow>
                </effect>
             </AnchorPane>
-            <AnchorPane layoutX="20.0" layoutY="375.0" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="20.0" layoutY="375.0" onMouseClicked="#inventoryItemListOnMouseClick" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
                <children>
                   <Label layoutX="49.0" layoutY="87.0" text="Item List">
                      <font>
@@ -96,7 +96,7 @@
                   <Font name="Arial" size="12.0" />
                </font>
             </TextField>
-            <Button layoutX="320.0" layoutY="62.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="73.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Load" textFill="WHITE">
+            <Button layoutX="320.0" layoutY="62.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="23.0" prefWidth="73.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Load" textFill="WHITE">
                <font>
                   <Font name="Candara" size="17.0" />
                </font>

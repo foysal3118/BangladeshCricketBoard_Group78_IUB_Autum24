@@ -1,29 +1,69 @@
 package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-public class LoginViewPageController
-{
-    @javafx.fxml.FXML
-    private TextField LogInUserIDTextField;
-    @javafx.fxml.FXML
+public class LoginViewPageController {
+
+    @FXML
     private PasswordField LogInUserIDPasswordField;
 
-    @javafx.fxml.FXML
+    @FXML
+    private TextField LogInUserIDTextField;
+
+    @FXML
     public void initialize() {
+        // This method will be called when the FXML is loaded
     }
 
-    @javafx.fxml.FXML
-    public void LogInNewSignUpButtonOnAction(ActionEvent actionEvent) {
+    @FXML
+    void LogInForgotPasswordButtonOnAction(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/logindsigns/ForgetPasswordSceneDesigns/ForgetPasswordPage_1.fxml"));
+            Parent root = fxmlLoader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            MouseDragClass.setStageAndSetupDrag(stage, root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {}
     }
 
-    @javafx.fxml.FXML
-    public void LogInForgotPasswordButtonOnAction(ActionEvent actionEvent) {
+    @FXML
+    void LogInNewSignUpButtonOnAction(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/logindsigns/SignIn_&_Up_Designs/SignUpViewPage.fxml"));
+            Parent root = fxmlLoader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            MouseDragClass.setStageAndSetupDrag(stage, root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {}
     }
 
-    @javafx.fxml.FXML
-    public void LogInSignInButtonOnAction(ActionEvent actionEvent) {
+    @FXML
+    void LogInSignInButtonOnAction(ActionEvent event) {
+        
     }
+
+    @FXML
+    void LoginPageCloseButtonOnAction(ActionEvent event) {
+        System.exit(0);
+    }
+
+    @FXML
+    void LoginPageMinimizeButtonOnAction(ActionEvent event) {
+        Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        stage.setIconified(true);
+    }
+
 }
