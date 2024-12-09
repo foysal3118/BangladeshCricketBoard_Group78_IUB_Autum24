@@ -16,6 +16,7 @@ public class BcbMainApplicationClass extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+<<<<<<< HEAD
 
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);
@@ -34,6 +35,11 @@ public class BcbMainApplicationClass extends Application {
             stage.setY(event.getScreenY() - yOffSet);
         });
 
+=======
+        FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/logistic_manger_dashboard/LogisticManagerDashbordViewPage.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("");
+>>>>>>> d9524d6be640822c5f7f44d66dc25dc8ae513e48
         stage.setScene(scene);
         stage.show();
     }
