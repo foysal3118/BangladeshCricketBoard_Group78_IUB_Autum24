@@ -1,4 +1,4 @@
-package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS;
+package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.ScheduleManger;
 
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -10,8 +10,6 @@ import javafx.scene.layout.AnchorPane;
 public class ScheduleManagerDashBoardDesignController
 {
     @javafx.fxml.FXML
-    private AnchorPane inventorySideBar;
-    @javafx.fxml.FXML
     private Button WindowMinimizeButton;
     @javafx.fxml.FXML
     private AnchorPane homeSideBar;
@@ -20,19 +18,9 @@ public class ScheduleManagerDashBoardDesignController
     @javafx.fxml.FXML
     private Label financeLabel;
     @javafx.fxml.FXML
-    private Label inventoryLabel;
-    @javafx.fxml.FXML
     private Label logOutLabel;
     @javafx.fxml.FXML
-    private TextField searchTextField;
-    @javafx.fxml.FXML
-    private AnchorPane feedbackSideBar;
-    @javafx.fxml.FXML
     private Label userNameTextField;
-    @javafx.fxml.FXML
-    private AnchorPane informationSideBar;
-    @javafx.fxml.FXML
-    private Label informationLabel;
     @javafx.fxml.FXML
     private Label userIdTextField;
     @javafx.fxml.FXML
@@ -46,9 +34,15 @@ public class ScheduleManagerDashBoardDesignController
     @javafx.fxml.FXML
     private Label homeLabel;
     @javafx.fxml.FXML
-    private Label feedbackLabel;
-    @javafx.fxml.FXML
     private AnchorPane logOutSideBar;
+    @javafx.fxml.FXML
+    private AnchorPane NotificationsSideBar;
+    @javafx.fxml.FXML
+    private AnchorPane ScheduleSideBar;
+    @javafx.fxml.FXML
+    private Label NotificationsLabel;
+    @javafx.fxml.FXML
+    private Label ScheduleLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -66,19 +60,19 @@ public class ScheduleManagerDashBoardDesignController
     public void closeOnActionButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void financeOnMouseClick(Event event) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void searchOnMouseClick(Event event) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void feedbackOnMouseClick(Event event) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void inventoryOnMouseClick(Event event) {
     }
 
@@ -86,11 +80,27 @@ public class ScheduleManagerDashBoardDesignController
     public void logOutOnMouseClick(Event event) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void accountSettingOnMouseClick(Event event) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void informationOnMouseClick(Event event) {
+    }
+
+    @javafx.fxml.FXML
+    public void NotificationsSideBarOnMouseClick(Event event) {
+    }
+
+    @javafx.fxml.FXML
+    public void accountSettingsSideBarOnMouseClick(Event event) {
+    }
+
+    @javafx.fxml.FXML
+    public void financeSideBarOnMouseClick(Event event) {
+    }
+
+    @javafx.fxml.FXML
+    public void ScheduleSideBarOnMouseClick(Event event) {
     }
 }
