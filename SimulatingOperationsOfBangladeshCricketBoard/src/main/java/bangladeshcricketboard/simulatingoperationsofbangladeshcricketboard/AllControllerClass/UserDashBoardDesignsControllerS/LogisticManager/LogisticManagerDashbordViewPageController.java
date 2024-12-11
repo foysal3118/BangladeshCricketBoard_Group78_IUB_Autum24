@@ -3,15 +3,11 @@ package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllC
 import java.io.IOException;
 
 import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.BcbMainApplicationClass;
-import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.LoginViewPageController;
-import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.MouseDragClass;
+import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass.CommonUltilityForUser;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -276,15 +272,18 @@ public class LogisticManagerDashbordViewPageController {
 
     @FXML
     void logOutOnMouseClick(MouseEvent event) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/logindsigns/SignIn_&_Up_Designs/LoginViewPage.fxml"));
-            Parent root = fxmlLoader.load();
-            Scene scene = new Scene(root);
-            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            MouseDragClass.setStageAndSetupDrag(stage, root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {}
+
+        CommonUltilityForUser commonUltilityForUser = new CommonUltilityForUser();
+        commonUltilityForUser.logout(event);
+        // try {
+        //     FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/logindsigns/SignIn_&_Up_Designs/LoginViewPage.fxml"));
+        //     Parent root = fxmlLoader.load();
+        //     Scene scene = new Scene(root);
+        //     Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        //     MouseDragClass.setStageAndSetupDrag(stage, root);
+        //     stage.setScene(scene);
+        //     stage.show();
+        // } catch (IOException e) {}
     }
 
     @FXML
