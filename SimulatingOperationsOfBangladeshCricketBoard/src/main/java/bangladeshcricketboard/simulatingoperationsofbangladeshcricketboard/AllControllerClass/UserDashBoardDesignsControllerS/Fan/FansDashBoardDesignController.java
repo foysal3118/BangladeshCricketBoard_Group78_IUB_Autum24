@@ -1,4 +1,4 @@
-package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS;
+package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.Fan;
 
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -10,33 +10,33 @@ import javafx.scene.layout.AnchorPane;
 public class FansDashBoardDesignController
 {
     @javafx.fxml.FXML
-    private AnchorPane inventorySideBar;
-    @javafx.fxml.FXML
     private Button WindowMinimizeButton;
     @javafx.fxml.FXML
     private AnchorPane homeSideBar;
     @javafx.fxml.FXML
     private Label accountsettingsLabel;
     @javafx.fxml.FXML
-    private Label financeLabel;
+    private Label ShopLabel;
     @javafx.fxml.FXML
-    private Label inventoryLabel;
+    private AnchorPane TicketsSideBar;
     @javafx.fxml.FXML
     private Label logOutLabel;
     @javafx.fxml.FXML
     private TextField searchTextField;
     @javafx.fxml.FXML
+    private AnchorPane ShopSideBar;
+    @javafx.fxml.FXML
+    private Label UpdateLabel;
+    @javafx.fxml.FXML
+    private AnchorPane UpdateSideBar;
+    @javafx.fxml.FXML
     private AnchorPane feedbackSideBar;
     @javafx.fxml.FXML
     private Label userNameTextField;
     @javafx.fxml.FXML
-    private AnchorPane informationSideBar;
-    @javafx.fxml.FXML
-    private Label informationLabel;
+    private Label TicketsLabel;
     @javafx.fxml.FXML
     private Label userIdTextField;
-    @javafx.fxml.FXML
-    private AnchorPane financeSideBar;
     @javafx.fxml.FXML
     private AnchorPane leftSideBar;
     @javafx.fxml.FXML
@@ -58,7 +58,7 @@ public class FansDashBoardDesignController
     public void minimizeOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void homeOnMouseClick(Event event) {
     }
 
@@ -66,7 +66,7 @@ public class FansDashBoardDesignController
     public void closeOnActionButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void financeOnMouseClick(Event event) {
     }
 
@@ -78,19 +78,43 @@ public class FansDashBoardDesignController
     public void feedbackOnMouseClick(Event event) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void inventoryOnMouseClick(Event event) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void logOutOnMouseClick(Event event) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void accountSettingOnMouseClick(Event event) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void informationOnMouseClick(Event event) {
+    }
+
+    @javafx.fxml.FXML
+    public void UpdateSideBarOnMouseClick(Event event) {
+    }
+
+    @javafx.fxml.FXML
+    public void TicketsSideBarOnMouseClick(Event event) {
+    }
+
+    @javafx.fxml.FXML
+    public void accountSettingsSideBarOnMouseClick(Event event) {
+    }
+
+    @javafx.fxml.FXML
+    public void homeSideBarOnMouseClick(Event event) {
+    }
+
+    @javafx.fxml.FXML
+    public void logOutSideBarOnMouseClick(Event event) {
+    }
+
+    @javafx.fxml.FXML
+    public void ShopSideBarOnMouseClick(Event event) {
     }
 }
