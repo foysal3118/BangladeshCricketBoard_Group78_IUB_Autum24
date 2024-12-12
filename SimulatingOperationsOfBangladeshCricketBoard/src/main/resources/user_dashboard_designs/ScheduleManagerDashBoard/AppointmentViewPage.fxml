@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="543.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.ScheduleManger.AppointmentViewPageController">
+   <children>
+      <Button layoutX="202.0" layoutY="448.0" mnemonicParsing="false" onAction="#CancelAppointmentButtonOnAction" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: EF5350;" text="Cancel Appointment" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="201.0" layoutY="492.0" mnemonicParsing="false" onAction="#RequestForAppointmentButtonOnAction" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #004D40;" text="Request for Appointment" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+      <Line endX="243.0" layoutX="194.0" layoutY="333.0" startX="-183.0" />
+      <TableView layoutX="11.0" layoutY="9.0" prefHeight="233.0" prefWidth="427.0">
+        <columns>
+          <TableColumn prefWidth="97.0" text="Appointment ID" />
+          <TableColumn prefWidth="83.0" text="Date" />
+            <TableColumn prefWidth="87.0" text="Time" />
+            <TableColumn prefWidth="159.0" text="Person Name" />
+        </columns>
+      </TableView>
+      <Button layoutX="202.0" layoutY="287.0" mnemonicParsing="false" onAction="#LoadAllAppointmentDetailsButtonOnAction" prefHeight="16.0" prefWidth="230.0" style="-fx-background-color: #004D40;" text="Load Appointments Details" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="AppointmentIDTextField" layoutX="165.0" layoutY="383.0" promptText="Enter ID" style="-fx-background-color: tyrasnarant; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #004D40;">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="45.0" layoutY="387.0" text="Appointment ID :">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="DateFilterComboBox" layoutX="86.0" layoutY="252.0" prefWidth="150.0" />
+      <Label layoutX="26.0" layoutY="254.0" text="Filter :">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

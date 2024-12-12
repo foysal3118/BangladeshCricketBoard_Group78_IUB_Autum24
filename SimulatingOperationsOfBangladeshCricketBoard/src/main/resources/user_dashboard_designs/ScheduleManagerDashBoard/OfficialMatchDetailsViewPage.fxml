@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="543.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.ScheduleManger.OfficialMatchDetailsViewPageController">
+   <children>
+      <TableView layoutX="15.0" layoutY="40.0" prefHeight="211.0" prefWidth="417.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Match ID" />
+            <TableColumn prefWidth="88.0" text="Match With" />
+            <TableColumn prefWidth="73.0" text="Date" />
+            <TableColumn text="Time" />
+            <TableColumn prefWidth="100.0" text="Venue" />
+         </columns>
+      </TableView>
+      <Button layoutX="249.0" layoutY="264.0" mnemonicParsing="false" onAction="#LoadApprovedMatchDetailsOnActionButton" prefHeight="58.0" prefWidth="175.0" style="-fx-background-color: #004D40; -fx-cursor: hand;" text="Load Approved Match by Finance" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <ComboBox fx:id="FilterComboBox" layoutX="77.0" layoutY="296.0" prefHeight="25.0" prefWidth="115.0" />
+      <Label layoutX="30.0" layoutY="299.0" text="Filter:">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="265.0" layoutX="163.0" layoutY="346.0" startX="-153.0" />
+      <Button layoutX="144.0" layoutY="391.0" mnemonicParsing="false" onAction="#ConfirmAllAsOfficialMatchOnActionButton" prefHeight="58.0" prefWidth="175.0" style="-fx-background-color: EF5350; -fx-cursor: hand;" text="Confirm All As Official Match" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
