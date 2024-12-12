@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.SalesManager.SalesTicketRefundController">
+   <children>
+      <Button layoutX="263.0" layoutY="42.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="23.0" prefWidth="73.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Load" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="17.0" />
+         </font>
+      </Button>
+      <TableView editable="true" layoutX="19.0" layoutY="84.0" prefHeight="272.0" prefWidth="410.0" style="-fx-background-color: transparent;">
+         <columns>
+            <TableColumn prefWidth="96.79998779296875" text="Ticket ID" />
+            <TableColumn prefWidth="216.800048828125" text="Reason" />
+            <TableColumn prefWidth="96.79998779296875" text="Sold Date" />
+         </columns>
+      </TableView>
+      <Label layoutX="19.0" layoutY="46.0" text="Filter:">
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="76.0" layoutY="46.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <Label layoutX="87.0" layoutY="386.0" text="Select ID:">
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="186.0" layoutY="385.0" prefWidth="150.0" promptText="Request Id" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <Button layoutX="197.0" layoutY="433.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="33.0" prefWidth="100.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Approve" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="197.0" layoutY="477.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="33.0" prefWidth="100.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #800000; -fx-cursor: hand;" text="Decline" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

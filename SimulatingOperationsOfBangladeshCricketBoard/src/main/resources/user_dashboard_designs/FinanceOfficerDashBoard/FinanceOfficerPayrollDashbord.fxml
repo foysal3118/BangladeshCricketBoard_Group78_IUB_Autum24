@@ -13,11 +13,11 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="LogisticInventoryBorderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogisticManagerInventoryDashbordController">
+<BorderPane fx:id="financePayrollBorderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.FinanceOfficer.FinanceOfficerPayrollDashbordController">
    <right>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane layoutX="20.0" layoutY="219.0" onMouseClicked="#inventoryAddItemsOnMouseClick" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="20.0" layoutY="219.0" onMouseClicked="#payrollHistoryOnMouseClick" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
                <children>
                   <Label layoutX="23.0" layoutY="87.0" text="Payroll History">
                      <font>
@@ -43,7 +43,7 @@
                   <Font name="Candara Bold" size="25.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="20.0" layoutY="65.0" onMouseClicked="#inventoryShowAllItemsOnMouseClick" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="20.0" layoutY="65.0" onMouseClicked="#payrollRequestOnMouseClick" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
                <children>
                   <Label layoutX="13.0" layoutY="89.0" text="Payroll Request">
                      <font>
@@ -70,7 +70,7 @@
    <center>
       <AnchorPane prefHeight="563.0" prefWidth="447.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="262.0" layoutY="35.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="23.0" prefWidth="73.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Load" textFill="WHITE">
+            <Button layoutX="262.0" layoutY="35.0" mnemonicParsing="false" onAction="#payrollLoadOnActionButton" prefHeight="23.0" prefWidth="73.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Load" textFill="WHITE">
                <font>
                   <Font name="Candara" size="17.0" />
                </font>
@@ -94,12 +94,12 @@
                </font>
             </Label>
             <ComboBox layoutX="185.0" layoutY="378.0" prefWidth="150.0" promptText="Request Id" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
-            <Button layoutX="196.0" layoutY="426.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="33.0" prefWidth="100.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Approve" textFill="WHITE">
+            <Button layoutX="196.0" layoutY="426.0" mnemonicParsing="false" onAction="#approveOnActionButton" prefHeight="33.0" prefWidth="100.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Approve" textFill="WHITE">
                <font>
                   <Font name="Candara" size="17.0" />
                </font>
             </Button>
-            <Button layoutX="196.0" layoutY="470.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="33.0" prefWidth="100.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #800000; -fx-cursor: hand;" text="Decline" textFill="WHITE">
+            <Button layoutX="196.0" layoutY="470.0" mnemonicParsing="false" onAction="#declineOnActionButton" prefHeight="33.0" prefWidth="100.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #800000; -fx-cursor: hand;" text="Decline" textFill="WHITE">
                <font>
                   <Font name="Candara" size="17.0" />
                </font>
