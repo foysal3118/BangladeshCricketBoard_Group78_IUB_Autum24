@@ -2,6 +2,7 @@ package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard;
 
 import java.io.IOException;
 
+import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass.MotherOfAllClasses;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -31,7 +32,7 @@ public class LoginViewPageController {
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
-            MouseDragClass.setStageAndSetupDrag(stage, root);
+            MotherOfAllClasses.setStageAndSetupDrag(stage, root);
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {}
@@ -44,7 +45,7 @@ public class LoginViewPageController {
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
-            MouseDragClass.setStageAndSetupDrag(stage, root);
+            MotherOfAllClasses.setStageAndSetupDrag(stage, root);
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {}

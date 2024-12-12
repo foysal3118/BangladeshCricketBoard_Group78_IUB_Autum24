@@ -7,7 +7,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -17,7 +16,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="LogisticManagerDashbordBorderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1016.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogisticManagerDashbordViewPageController">
+<BorderPane fx:id="FinanceOfficerDashbordBorderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1016.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.FinanceOfficer.FinanceOfficerDashbordDesignController">
    <top>
       <AnchorPane prefHeight="78.0" prefWidth="900.0" style="-fx-background-color: #004D40;" BorderPane.alignment="CENTER">
          <children>
@@ -26,21 +25,11 @@
                   <Image url="@FinanceOfficerDashboard_images/founder.png" />
                </image>
             </ImageView>
-            <Label layoutX="66.0" layoutY="32.0" prefHeight="71.0" prefWidth="138.0" text="Finance Officer" textAlignment="CENTER" textFill="#fff1f1" wrapText="true">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="66.0" layoutY="32.0" prefHeight="71.0" prefWidth="138.0" text="Finance Officer" textAlignment="CENTER" textFill="#fff1f1" wrapText="true">
                <font>
-                  <Font name="Bookshelf Symbol 7" size="27.0" />
+                  <Font name="Candara Bold" size="25.0" />
                </font>
             </Label>
-            <TextField fx:id="searchTextField" layoutX="310.0" layoutY="59.0" prefHeight="33.0" prefWidth="232.0" promptText="Search" style="-fx-background-radius: 20;">
-               <font>
-                  <Font name="Arial" size="19.0" />
-               </font>
-            </TextField>
-            <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="504.0" layoutY="65.0" onMouseClicked="#searchOnMouseClick" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
-               <image>
-                  <Image url="@FinanceOfficerDashboard_images/magnifying-glass.png" />
-               </image>
-            </ImageView>
             <ImageView fitHeight="37.0" fitWidth="54.0" layoutX="848.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@FinanceOfficerDashboard_images/profile.png" />
@@ -83,9 +72,9 @@
                         <Image url="@FinanceOfficerDashboard_images/home.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="homeLabel" layoutX="60.0" layoutY="13.0" prefHeight="26.0" prefWidth="55.0" text="Home" textFill="WHITE">
+                  <Label fx:id="homeLabel" layoutX="60.0" layoutY="13.0" prefHeight="30.0" prefWidth="67.0" text="Home" textFill="WHITE">
                      <font>
-                        <Font name="Candara" size="21.0" />
+                        <Font name="Candara Bold" size="25.0" />
                      </font>
                   </Label>
                </children>
@@ -94,7 +83,7 @@
                <children>
                   <Label fx:id="financeLabel" layoutX="58.0" layoutY="13.0" text="Finance" textFill="WHITE">
                      <font>
-                        <Font name="Candara" size="21.0" />
+                        <Font name="Candara Bold" size="25.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="24.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
@@ -104,11 +93,11 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="inventorySideBar" layoutX="1.0" layoutY="96.0" onMouseClicked="#inventoryOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
+            <AnchorPane fx:id="payrollSideBar" layoutX="1.0" layoutY="96.0" onMouseClicked="#payrollOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
                <children>
-                  <Label fx:id="inventoryLabel" layoutX="59.0" layoutY="13.0" text="Payroll" textFill="WHITE">
+                  <Label fx:id="payrollLabel" layoutX="59.0" layoutY="13.0" text="Payroll" textFill="WHITE">
                      <font>
-                        <Font name="Candara" size="21.0" />
+                        <Font name="Candara Bold" size="25.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="24.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
@@ -122,7 +111,7 @@
                <children>
                   <Label fx:id="informationLabel" layoutX="57.0" layoutY="13.0" text="Information" textFill="WHITE">
                      <font>
-                        <Font name="Candara" size="21.0" />
+                        <Font name="Candara Bold" size="25.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="22.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
@@ -132,11 +121,11 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="feedbackSideBar" layoutX="1.0" layoutY="282.0" onMouseClicked="#feedbackOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
+            <AnchorPane fx:id="investorSideBar" layoutX="1.0" layoutY="282.0" onMouseClicked="#investorsOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
                <children>
-                  <Label fx:id="feedbackLabel" layoutX="56.0" layoutY="13.0" text="Investors" textFill="WHITE">
+                  <Label fx:id="investorLabel" layoutX="56.0" layoutY="13.0" text="Investors" textFill="WHITE">
                      <font>
-                        <Font name="Candara" size="21.0" />
+                        <Font name="Candara Bold" size="25.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="25.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
@@ -150,7 +139,7 @@
                <children>
                   <Label fx:id="accountsettingsLabel" layoutX="55.0" layoutY="13.0" text="Settings" textFill="WHITE">
                      <font>
-                        <Font name="Candara" size="21.0" />
+                        <Font name="Candara Bold" size="25.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="23.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
@@ -160,11 +149,11 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="logOutSideBar" layoutX="1.0" layoutY="503.0" onMouseClicked="#logOutOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
+            <AnchorPane fx:id="logOutSideBar" layoutX="1.0" layoutY="493.0" onMouseClicked="#logOutOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
                <children>
                   <Label fx:id="logOutLabel" layoutX="54.0" layoutY="13.0" text="Log Out" textFill="WHITE">
                      <font>
-                        <Font name="Candara" size="21.0" />
+                        <Font name="Candara Bold" size="25.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="18.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
