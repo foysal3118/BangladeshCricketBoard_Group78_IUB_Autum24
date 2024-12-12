@@ -13,16 +13,16 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="LogisticFinanceBorderpan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="salesTicketBorderpan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.SalesManager.SalesManagerTicketDashbordController">
    <right>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="61.0" layoutY="29.0" text="Ticket" textFill="#1a237e">
                <font>
                   <Font name="Candara Bold" size="25.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="17.0" layoutY="84.0" onMouseClicked="#budgetRequestOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="17.0" layoutY="84.0" onMouseClicked="#sellTicketOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -43,7 +43,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="17.0" layoutY="199.0" onMouseClicked="#requestStatusOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="17.0" layoutY="199.0" onMouseClicked="#refundOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -64,7 +64,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="17.0" layoutY="313.0" onMouseClicked="#costReportOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="17.0" layoutY="313.0" onMouseClicked="#soldHistoryOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>

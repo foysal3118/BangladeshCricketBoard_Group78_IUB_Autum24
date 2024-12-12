@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.SalesManager.SalesMerchendiseSellMerchendiseController">
+   <children>
+      <Label layoutX="76.0" layoutY="64.0" text="Product Type:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="216.0" layoutY="61.0" prefHeight="28.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0; -fx-cursor: hand;" />
+      <Button layoutX="176.0" layoutY="468.0" mnemonicParsing="false" onAction="#sendRequestOnActionButton" style="-fx-background-color: #800000; -fx-background-radius: 20px; -fx-cursor: hand;" text="Submit" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField layoutX="213.0" layoutY="115.0" prefHeight="28.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <Label layoutX="73.0" layoutY="118.0" text="Quantity:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="174.0" text="Product Name:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="213.0" layoutY="171.0" prefHeight="28.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <Label layoutX="76.0" layoutY="218.0" text="Product Price:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="216.0" layoutY="215.0" prefHeight="28.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <Label layoutX="76.0" layoutY="276.0" text="Description:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="79.0" layoutY="307.0" prefHeight="132.0" prefWidth="310.0" />
+   </children>
+</AnchorPane>

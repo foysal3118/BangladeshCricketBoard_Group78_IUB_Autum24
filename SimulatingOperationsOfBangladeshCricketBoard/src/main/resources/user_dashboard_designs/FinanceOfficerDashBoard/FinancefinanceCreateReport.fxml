@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.FinanceOfficer.FinancefinanceCreateReportController">
+   <children>
+      <Label layoutX="50.0" layoutY="69.0" text="Project Name:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="185.0" layoutY="66.0" prefHeight="27.0" prefWidth="170.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <Label layoutX="52.0" layoutY="104.0" text="Project ID:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="139.0" text="Total Budget:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="175.0" text="Category:">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="185.0" layoutY="21.0" text="Select ID:">
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="284.0" layoutY="20.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <TextField layoutX="185.0" layoutY="101.0" prefHeight="27.0" prefWidth="170.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <TextField layoutX="185.0" layoutY="136.0" prefHeight="27.0" prefWidth="170.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <TextField layoutX="185.0" layoutY="172.0" prefHeight="27.0" prefWidth="170.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <Button layoutX="155.0" layoutY="287.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="33.0" prefWidth="100.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Create" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="112.0" layoutY="336.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="34.0" prefWidth="200.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #800000; -fx-cursor: hand;" text="Send to Bord President" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="155.0" layoutY="238.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="33.0" prefWidth="100.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #006064; -fx-cursor: hand;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

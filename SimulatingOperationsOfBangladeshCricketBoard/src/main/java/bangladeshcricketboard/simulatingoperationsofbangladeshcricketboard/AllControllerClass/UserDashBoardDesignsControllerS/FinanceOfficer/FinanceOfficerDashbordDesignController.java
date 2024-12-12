@@ -60,9 +60,6 @@ public class FinanceOfficerDashbordDesignController {
     private AnchorPane logOutSideBar;
 
     @FXML
-    private AnchorPane logisticManagerHomeDashbordBorderpane;
-
-    @FXML
     private Label payrollLabel;
 
     @FXML
@@ -74,7 +71,9 @@ public class FinanceOfficerDashbordDesignController {
     @FXML
     private Label userNameTextField;
 
+    @FXML
     public void initialize() {
+
         MotherOfAllClasses.mouseEnterEffectMinimizeButton(WindowMinimizeButton);
         MotherOfAllClasses.mouseEnterEffectExitButton(WindowCloseButton);
         MotherOfAllClasses.addHoverEffect(accountSettingsSideBar, financeSideBar, homeSideBar, informationSideBar, investorSideBar, logOutSideBar, payrollSideBar);
@@ -103,7 +102,7 @@ public class FinanceOfficerDashbordDesignController {
 
     @FXML
     void accountSettingOnMouseClick(MouseEvent event) {
-
+        MotherOfAllClasses.borderPaneCenterChange(FinanceOfficerDashbordBorderpane, "/user_dashboard_designs/FinanceOfficerDashBoard/FinanceOfficerSettingsDashbord.fxml");
     }
 
     @FXML
@@ -113,37 +112,37 @@ public class FinanceOfficerDashbordDesignController {
 
     @FXML
     void financeOnMouseClick(MouseEvent event) {
-
+        MotherOfAllClasses.borderPaneCenterChange(FinanceOfficerDashbordBorderpane, "/user_dashboard_designs/FinanceOfficerDashBoard/FinanceOfficerFinanceDashbord.fxml");
     }
 
     @FXML
     void homeOnMouseClick(MouseEvent event) {
-        
+        MotherOfAllClasses.borderPaneCenterChange(FinanceOfficerDashbordBorderpane, "/user_dashboard_designs/FinanceOfficerDashBoard/FinanceOfficerHomePage.fxml");
     }
 
     @FXML
     void informationOnMouseClick(MouseEvent event) {
-
+        MotherOfAllClasses.borderPaneCenterChange(FinanceOfficerDashbordBorderpane, "/user_dashboard_designs/FinanceOfficerDashBoard/FinanceOfficerInformationDashbord.fxml");
     }
 
     @FXML
     void investorsOnMouseClick(MouseEvent event) {
+        MotherOfAllClasses.borderPaneCenterChange(FinanceOfficerDashbordBorderpane, "/user_dashboard_designs/FinanceOfficerDashBoard/FinanceInvestorsDashbord.fxml");
+    }
 
+    @FXML
+    void payrollOnMouseClick(MouseEvent event) {
+        MotherOfAllClasses.borderPaneCenterChange(FinanceOfficerDashbordBorderpane, "/user_dashboard_designs/FinanceOfficerDashBoard/FinanceOfficerPayrollDashbord.fxml");
     }
 
     @FXML
     void logOutOnMouseClick(MouseEvent event) {
-
+        MotherOfAllClasses.logout(event);
     }
 
     @FXML
     void minimizeOnAction(ActionEvent event) {
         MotherOfAllClasses.minimizeButton(event);
-    }
-
-    @FXML
-    void payrollOnMouseClick(MouseEvent event) {
-
     }
 
 }

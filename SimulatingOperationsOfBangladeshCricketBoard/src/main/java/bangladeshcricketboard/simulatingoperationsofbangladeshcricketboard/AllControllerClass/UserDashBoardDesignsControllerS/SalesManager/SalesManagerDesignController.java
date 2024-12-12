@@ -31,7 +31,7 @@ public class SalesManagerDesignController {
 
     @FXML
     void accountSettingOnMouseClick(MouseEvent event) {
-
+        MotherOfAllClasses.borderPaneCenterChange(slaesManagerBorderPane, "/user_dashboard_designs/SalesManagerDashBoard/SalesManagerSettingsDashbord.fxml");
     }
 
     @FXML
@@ -41,22 +41,22 @@ public class SalesManagerDesignController {
 
     @FXML
     void homeOnMouseClick(MouseEvent event) {
-
+        MotherOfAllClasses.borderPaneCenterChange(slaesManagerBorderPane, "/user_dashboard_designs/SalesManagerDashBoard/SalesManagerHomePage.fxml");
     }
 
     @FXML
     void informationOnMouseClick(MouseEvent event) {
-
+        MotherOfAllClasses.borderPaneCenterChange(slaesManagerBorderPane, "/user_dashboard_designs/SalesManagerDashBoard/SalesManagerInformationDashbord.fxml");
     }
 
     @FXML
     void logOutOnMouseClick(MouseEvent event) {
-
+        MotherOfAllClasses.logout(event);
     }
 
     @FXML
     void merchantdiseOnMouseClick(MouseEvent event) {
-
+        MotherOfAllClasses.borderPaneCenterChange(slaesManagerBorderPane, "/user_dashboard_designs/SalesManagerDashBoard/SalesManagerMerchendiseDashbord.fxml");
     }
 
     @FXML
@@ -66,7 +66,7 @@ public class SalesManagerDesignController {
 
     @FXML
     void ticketOnMouseClick(MouseEvent event) {
-
+        MotherOfAllClasses.borderPaneCenterChange(slaesManagerBorderPane, "/user_dashboard_designs/SalesManagerDashBoard/SalesManagerTicketDashbord.fxml");
     }
 
 }

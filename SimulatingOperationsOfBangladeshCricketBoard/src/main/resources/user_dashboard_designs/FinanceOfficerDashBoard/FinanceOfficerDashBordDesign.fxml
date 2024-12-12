@@ -93,20 +93,6 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="payrollSideBar" layoutX="1.0" layoutY="96.0" onMouseClicked="#payrollOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
-               <children>
-                  <Label fx:id="payrollLabel" layoutX="59.0" layoutY="13.0" text="Payroll" textFill="WHITE">
-                     <font>
-                        <Font name="Candara Bold" size="25.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="24.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@FinanceOfficerDashboard_images/calendar1.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
             <AnchorPane fx:id="informationSideBar" layoutX="1.0" layoutY="220.0" onMouseClicked="#informationOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
                <children>
                   <Label fx:id="informationLabel" layoutX="57.0" layoutY="13.0" text="Information" textFill="WHITE">
@@ -123,7 +109,7 @@
             </AnchorPane>
             <AnchorPane fx:id="investorSideBar" layoutX="1.0" layoutY="282.0" onMouseClicked="#investorsOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
                <children>
-                  <Label fx:id="investorLabel" layoutX="56.0" layoutY="13.0" text="Investors" textFill="WHITE">
+                  <Label fx:id="investorLabel" layoutX="56.0" layoutY="13.0" text="Sponers" textFill="WHITE">
                      <font>
                         <Font name="Candara Bold" size="25.0" />
                      </font>
@@ -161,6 +147,20 @@
                         <Image url="@FinanceOfficerDashboard_images/logout.png" />
                      </image>
                   </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="payrollSideBar" layoutX="1.0" layoutY="96.0" onMouseClicked="#payrollOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="23.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@FinanceOfficerDashboard_images/calendar1.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="payrollLabel" layoutX="60.0" layoutY="13.0" prefHeight="30.0" prefWidth="75.0" text="Payroll" textFill="WHITE">
+                     <font>
+                        <Font name="Candara Bold" size="25.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </children>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.FinanceOfficer.FinancePayrollHistoryDashboardController">
+   <children>
+      <Button layoutX="264.0" layoutY="45.0" mnemonicParsing="false" onAction="#historyLoadOnActionButton" prefHeight="23.0" prefWidth="73.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Load" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="17.0" />
+         </font>
+      </Button>
+      <TableView editable="true" layoutX="20.0" layoutY="87.0" prefHeight="410.0" prefWidth="410.0" style="-fx-background-color: transparent;">
+         <columns>
+            <TableColumn prefWidth="96.79998779296875" text="No." />
+            <TableColumn prefWidth="216.800048828125" text="Payroll Details" />
+            <TableColumn prefWidth="96.79998779296875" text="Date" />
+         </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="49.0" text="Filter:">
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="77.0" layoutY="49.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+   </children>
+</AnchorPane>

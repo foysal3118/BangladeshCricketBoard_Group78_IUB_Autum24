@@ -13,11 +13,11 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="LogisticInventoryBorderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogisticManagerInventoryDashbordController">
+<BorderPane fx:id="FinancefinanceBorderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.FinanceOfficer.FinanceOfficerFinanceDashbordController">
    <right>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane layoutX="20.0" layoutY="219.0" onMouseClicked="#inventoryAddItemsOnMouseClick" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="20.0" layoutY="219.0" onMouseClicked="#revenueGraphOnMouseClick" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
                <children>
                   <Label layoutX="16.0" layoutY="86.0" text="Revenue Graph">
                      <font>
@@ -43,7 +43,7 @@
                   <Font name="Candara Bold" size="25.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="20.0" layoutY="65.0" onMouseClicked="#inventoryShowAllItemsOnMouseClick" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="20.0" layoutY="65.0" onMouseClicked="#budgetRequestOnMouseClick" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
                <children>
                   <Label layoutX="13.0" layoutY="89.0" text="Budget Request">
                      <font>
@@ -64,7 +64,7 @@
                   </DropShadow>
                </effect>
             </AnchorPane>
-            <AnchorPane layoutX="23.0" layoutY="377.0" onMouseClicked="#inventoryAddItemsOnMouseClick" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="23.0" layoutY="377.0" onMouseClicked="#createReportOnMouseClick" prefHeight="126.0" prefWidth="157.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-cursor: hand;">
                <children>
                   <Label layoutX="22.0" layoutY="86.0" text="Create Report">
                      <font>

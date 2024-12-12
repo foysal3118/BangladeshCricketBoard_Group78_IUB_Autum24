@@ -135,7 +135,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="1.0" layoutY="503.0" onMouseClicked="#logOutOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
+            <AnchorPane layoutX="1.0" layoutY="485.0" onMouseClicked="#logOutOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
                <children>
                   <Label layoutX="54.0" layoutY="13.0" text="Log Out" textFill="WHITE">
                      <font>

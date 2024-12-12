@@ -13,16 +13,16 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="LogisticFinanceBorderpan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="salesMerchendiseBorderpan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.SalesManager.SalesManagerMerchendiseDashbordController">
    <right>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="30.0" layoutY="29.0" text="Merchendise" textFill="#1a237e">
                <font>
                   <Font name="Candara Bold" size="25.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="17.0" layoutY="84.0" onMouseClicked="#budgetRequestOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="17.0" layoutY="84.0" onMouseClicked="#sellMerchendiseOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -43,7 +43,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="17.0" layoutY="199.0" onMouseClicked="#requestStatusOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="17.0" layoutY="199.0" onMouseClicked="#refundOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -64,7 +64,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="17.0" layoutY="313.0" onMouseClicked="#costReportOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="17.0" layoutY="313.0" onMouseClicked="#soldHistoryOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -91,7 +91,7 @@
    <center>
       <AnchorPane prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="77.0" layoutY="43.0" text="Item Type:">
+            <Label layoutX="77.0" layoutY="43.0" text="Product Type:">
                <font>
                   <Font name="Candara" size="18.0" />
                </font>
@@ -108,13 +108,13 @@
                   <Font name="Candara" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="74.0" layoutY="153.0" text="Item Name:">
+            <Label layoutX="74.0" layoutY="153.0" text="Product Name:">
                <font>
                   <Font name="Candara" size="18.0" />
                </font>
             </Label>
             <TextField layoutX="214.0" layoutY="150.0" prefHeight="28.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
-            <Label layoutX="74.0" layoutY="202.0" text="Item Price:">
+            <Label layoutX="74.0" layoutY="202.0" text="Product Price:">
                <font>
                   <Font name="Candara" size="18.0" />
                </font>
