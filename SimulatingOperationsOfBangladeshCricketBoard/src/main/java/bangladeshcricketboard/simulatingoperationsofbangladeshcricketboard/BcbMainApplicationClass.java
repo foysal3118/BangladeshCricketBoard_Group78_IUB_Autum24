@@ -21,8 +21,8 @@ public class BcbMainApplicationClass extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/SalesManagerDashBoard/SalesManagerDashBoardDesign.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
-
         MotherOfAllClasses.setStageAndSetupDrag(stage, root);
+
 
         stage.setScene(scene);
         stage.show();

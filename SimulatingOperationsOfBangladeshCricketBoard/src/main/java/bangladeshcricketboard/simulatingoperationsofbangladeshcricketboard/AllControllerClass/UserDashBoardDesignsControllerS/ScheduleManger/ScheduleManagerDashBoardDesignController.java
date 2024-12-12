@@ -43,6 +43,10 @@ public class ScheduleManagerDashBoardDesignController
     private Label NotificationsLabel;
     @javafx.fxml.FXML
     private Label ScheduleLabel;
+    @javafx.fxml.FXML
+    private Label NotificationsLabel1;
+    @javafx.fxml.FXML
+    private AnchorPane NotificationsSideBar1;
 
     @javafx.fxml.FXML
     public void initialize() {
