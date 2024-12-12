@@ -118,7 +118,7 @@ public class FinanceOfficerDashbordDesignController {
 
     @FXML
     void homeOnMouseClick(MouseEvent event) {
-
+        
     }
 
     @FXML

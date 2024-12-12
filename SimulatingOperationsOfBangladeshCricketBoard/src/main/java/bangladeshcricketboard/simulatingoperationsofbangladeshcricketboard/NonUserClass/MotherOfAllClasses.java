@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -127,5 +128,12 @@ public class MotherOfAllClasses {
     public static void minimizeButton(ActionEvent event){
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setIconified(true);
+    }
+
+    public static void borderPaneCenterChange(BorderPane borderPane, String fxmlPath) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource(fxmlPath));
+            borderPane.setCenter(fxmlLoader.load());
+        } catch (IOException e) {}
     }
 }

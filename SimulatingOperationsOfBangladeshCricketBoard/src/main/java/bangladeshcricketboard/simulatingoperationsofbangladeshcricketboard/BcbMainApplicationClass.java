@@ -18,7 +18,7 @@ public class BcbMainApplicationClass extends Application {
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);
 
-        FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/SalesManagerDashBoard/SalesManagerDashBoardDesign.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/FinanceOfficerDashBoard/FinanceOfficerDashBordDesign.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         MotherOfAllClasses.setStageAndSetupDrag(stage, root);
