@@ -2,6 +2,7 @@ package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard;
 
 import java.io.IOException;
 
+import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass.MotherOfAllClasses;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -28,7 +29,7 @@ public class ForgetPasswordPage_1Controller
             Parent root = fxmlLoader.load();
             Scene scene = new Scene(root);
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            MouseDragClass.setStageAndSetupDrag(stage, root);
+            MotherOfAllClasses.setStageAndSetupDrag(stage, root);
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {}
