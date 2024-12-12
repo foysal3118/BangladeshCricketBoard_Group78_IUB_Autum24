@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.ScheduleManger.ScheduleFinanceOptionDashBoardController">
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="18.0" layoutY="67.0" onMouseClicked="#UpdateBudgetOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color green="0.3019607961177826" blue="0.250980406999588" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <ImageView fitHeight="43.0" fitWidth="48.0" layoutX="62.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imageUsedForfxml/earning.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="18.0" layoutY="58.0" text="Update Budget">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;">
+               <children>
+                  <Button layoutX="231.0" layoutY="371.0" mnemonicParsing="false" onAction="#chooseFileOnActionButton" style="-fx-background-color: #004D40; -fx-background-radius: 20px; -fx-cursor: hand;" text="Choose a File" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Label layoutX="342.0" layoutY="373.0" text="File.pdf*">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="144.0" layoutY="427.0" mnemonicParsing="false" onAction="#updateBudgetOnActionButton" style="-fx-background-color: EF5350; -fx-background-radius: 20px; -fx-cursor: hand;" text="Update Budget" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <TableView layoutX="15.0" layoutY="32.0" prefHeight="179.0" prefWidth="417.0">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="Match ID" />
+                        <TableColumn prefWidth="88.0" text="Match With" />
+                        <TableColumn prefWidth="73.0" text="Date" />
+                        <TableColumn text="Time" />
+                        <TableColumn prefWidth="100.0" text="Venue" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="MatchIDTextField" layoutX="219.0" layoutY="325.0" promptText="Enter Match ID " style="-fx-background-color: transparant; -fx-border-color: #004D40; -fx-border-width: 0px 0px 2px 0px;">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="47.0" layoutY="329.0" text="Budget Specific Match:">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="318.0" layoutX="116.0" layoutY="290.0" startX="-100.0" />
+                  <Button layoutX="207.0" layoutY="225.0" mnemonicParsing="false" onAction="#LoadApprovedMatchDetailsOnActionButton" prefHeight="34.0" prefWidth="222.0" style="-fx-background-color: #004D40; -fx-cursor: hand;" text="Load Approved Match Details" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <ComboBox layoutX="72.0" layoutY="230.0" prefHeight="25.0" prefWidth="121.0" />
+                  <Label layoutX="27.0" layoutY="234.0" text="Filter:">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

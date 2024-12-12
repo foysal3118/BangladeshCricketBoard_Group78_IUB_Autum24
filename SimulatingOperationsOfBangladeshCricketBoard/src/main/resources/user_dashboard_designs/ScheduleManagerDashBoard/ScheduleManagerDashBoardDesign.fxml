@@ -19,7 +19,7 @@
             </ImageView>
             <Label layoutX="66.0" layoutY="32.0" prefHeight="71.0" prefWidth="138.0" text="Schedule Manager" textAlignment="CENTER" textFill="#fff1f1" wrapText="true">
                <font>
-                  <Font name="Bookshelf Symbol 7" size="27.0" />
+                  <Font name="Arial Bold" size="28.0" />
                </font>
             </Label>
             <ImageView fitHeight="37.0" fitWidth="54.0" layoutX="848.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
@@ -87,12 +87,12 @@
             </AnchorPane>
             <AnchorPane fx:id="ScheduleSideBar" layoutX="1.0" layoutY="88.0" onMouseClicked="#ScheduleSideBarOnMouseClick" prefHeight="54.0" prefWidth="214.0" style="-fx-cursor: hand;">
                <children>
-                  <Label fx:id="ScheduleLabel" layoutX="62.0" layoutY="12.0" prefHeight="35.0" prefWidth="115.0" text="Schedule" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                  <Label fx:id="ScheduleLabel" layoutX="61.0" layoutY="12.0" prefHeight="35.0" prefWidth="115.0" text="Schedule" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
                         <Font name="Arial Bold" size="24.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="22.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="21.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imageUsedForfxml/goal.png" />
                      </image>
@@ -115,12 +115,12 @@
             </AnchorPane>
             <AnchorPane fx:id="logOutSideBar" layoutX="1.0" layoutY="496.0" onMouseClicked="#logOutOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
                <children>
-                  <Label fx:id="logOutLabel" layoutX="65.0" layoutY="13.0" text="Log Out" textFill="WHITE">
+                  <Label fx:id="logOutLabel" layoutX="65.0" layoutY="11.0" text="Log Out" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="24.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="18.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="18.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imageUsedForfxml/logout.png" />
                      </image>
@@ -129,14 +129,28 @@
             </AnchorPane>
             <AnchorPane fx:id="NotificationsSideBar" layoutX="1.0" layoutY="204.0" onMouseClicked="#NotificationsSideBarOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
                <children>
-                  <Label fx:id="NotificationsLabel" layoutX="58.0" layoutY="13.0" text="Notifications" textFill="WHITE">
+                  <Label fx:id="NotificationsLabel" layoutX="55.0" layoutY="13.0" text="Notifications" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="17.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imageUsedForfxml/alarm-bell.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="NotificationsSideBar1" layoutX="1.0" layoutY="315.0" onMouseClicked="#NotificationsSideBarOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
+               <children>
+                  <Label fx:id="NotificationsLabel1" layoutX="58.0" layoutY="13.0" text="Update" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="24.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@imageUsedForfxml/alarm-bell.png" />
+                        <Image url="@imageUsedForfxml/update.png" />
                      </image>
                   </ImageView>
                </children>

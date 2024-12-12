@@ -33,7 +33,6 @@ public class BcbMainApplicationClass extends Application {
             stage.setX(event.getScreenX() - xOffSet);
             stage.setY(event.getScreenY() - yOffSet);
         });
-
         stage.setScene(scene);
         stage.show();
     }
