@@ -1,4 +1,4 @@
-package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS;
+package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.PurchasingCoordinator;
 
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
-public class BoardPresidentDashBoardDesignsController
+public class PurchasingCoordinatorDashBoardDesignController
 {
     @javafx.fxml.FXML
     private AnchorPane inventorySideBar;

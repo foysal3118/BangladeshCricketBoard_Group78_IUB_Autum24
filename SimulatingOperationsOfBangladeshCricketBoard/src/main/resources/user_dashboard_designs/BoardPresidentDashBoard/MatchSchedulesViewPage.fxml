@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="543.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.BoardPresident.MatchSchedulesViewPageController">
+   <children>
+      <TableView layoutX="15.0" layoutY="69.0" prefHeight="288.0" prefWidth="417.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Match ID" />
+            <TableColumn prefWidth="88.0" text="Match With" />
+            <TableColumn prefWidth="73.0" text="Date" />
+            <TableColumn text="Time" />
+            <TableColumn prefWidth="100.0" text="Venue" />
+         </columns>
+      </TableView>
+      <Label layoutX="123.0" layoutY="22.0" text="Offical Match Schedules">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

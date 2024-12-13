@@ -29,7 +29,7 @@
                <children>
                   <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="64.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@imageUsedForfxml/calendar%20(2).png" />
+                        <Image url="@imageUsedForfxml/calendar.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="18.0" layoutY="52.0" prefHeight="46.0" prefWidth="127.0" text="Update Slot For Confirmation" textAlignment="CENTER" wrapText="true">
@@ -50,7 +50,7 @@
                <children>
                   <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="64.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@imageUsedForfxml/calendar.png" />
+                        <Image url="@imageUsedForfxml/check.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="31.0" layoutY="52.0" prefHeight="46.0" prefWidth="104.0" text="Confirm Slot As Match day" textAlignment="CENTER" wrapText="true">
