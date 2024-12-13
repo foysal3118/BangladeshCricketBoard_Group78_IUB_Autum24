@@ -15,7 +15,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="820.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogisticManagerDashbordHomepageController">
    <children>
       <Label layoutX="70.0" layoutY="14.0" text="Overview" textFill="#1a237e">
@@ -41,15 +40,15 @@
                </font>
             </Label>
             <Line endX="53.33332824707031" layoutX="151.0" layoutY="55.0" startX="-100.0" />
-            <Button layoutX="95.0" layoutY="199.0" mnemonicParsing="false" style="-fx-background-radius: 20px; -fx-background-color: #455A64; -fx-cursor: hand;" text="View More" textFill="WHITE">
+            <Button layoutX="95.0" layoutY="199.0" mnemonicParsing="false" onAction="#matchViewMoreOnActionButton" style="-fx-background-radius: 20px; -fx-background-color: #455A64; -fx-cursor: hand;" text="View More" textFill="WHITE">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
             </Button>
-            <TableView editable="true" fixedCellSize="1.0" layoutX="18.0" layoutY="94.0" prefHeight="89.0" prefWidth="222.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+            <TableView fx:id="matchDateTableView" editable="true" fixedCellSize="1.0" layoutX="18.0" layoutY="94.0" prefHeight="89.0" prefWidth="222.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
                <columns>
-                  <TableColumn prefWidth="93.33338165283203" text="Match" />
-                  <TableColumn prefWidth="127.33326721191406" text="Match Date" />
+                  <TableColumn fx:id="matchDateMatchColume" prefWidth="93.33338165283203" text="Match" />
+                  <TableColumn fx:id="matchDateColume" prefWidth="127.33326721191406" text="Match Date" />
                </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -77,16 +76,16 @@
                </font>
             </Label>
             <Line endX="88.66668701171875" layoutX="204.0" layoutY="57.0" startX="-100.0" />
-            <TableView editable="true" fixedCellSize="1.0" layoutX="14.0" layoutY="91.0" prefHeight="98.0" prefWidth="381.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+            <TableView fx:id="requestStatusTableView" editable="true" fixedCellSize="1.0" layoutX="14.0" layoutY="91.0" prefHeight="98.0" prefWidth="381.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
                <columns>
-                  <TableColumn prefWidth="235.33334350585938" text="Request ID" />
-                  <TableColumn prefWidth="118.66668701171875" text="Status" />
+                  <TableColumn fx:id="requestIdColume" onEditStart="#requestIdColume" prefWidth="235.33334350585938" text="Request ID" />
+                  <TableColumn fx:id="statuscolume" prefWidth="118.66668701171875" text="Status" />
                </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <Button layoutX="168.0" layoutY="198.0" mnemonicParsing="false" style="-fx-background-radius: 20px; -fx-background-color: #455A64; -fx-cursor: hand;" text="View More" textFill="WHITE">
+            <Button layoutX="168.0" layoutY="198.0" mnemonicParsing="false" onAction="#requestViewMoreOnActionButton" style="-fx-background-radius: 20px; -fx-background-color: #455A64; -fx-cursor: hand;" text="View More" textFill="WHITE">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
@@ -105,7 +104,7 @@
             </DropShadow>
          </effect>
       </AnchorPane>
-      <BarChart layoutX="71.0" layoutY="320.0" prefHeight="204.0" prefWidth="419.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-background-radius: 10px;" title="Monthly Budgets">
+      <BarChart fx:id="MonthlyBudgetBarChart" layoutX="71.0" layoutY="320.0" prefHeight="204.0" prefWidth="419.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-background-radius: 10px;" title="Monthly Budgets">
          <xAxis>
             <CategoryAxis label="Month" prefHeight="24.0" prefWidth="342.0" side="BOTTOM" />
          </xAxis>
@@ -120,7 +119,7 @@
             </DropShadow>
          </effect>
       </BarChart>
-      <AnchorPane layoutX="510.0" layoutY="320.0" prefHeight="91.0" prefWidth="246.0" style="-fx-border-color: #004D40; -fx-border-radius: 10px; -fx-background-color: white; -fx-background-radius: 10px;">
+      <AnchorPane layoutX="510.0" layoutY="320.0" onMouseClicked="#inventoryItemsOnMouseClick" prefHeight="91.0" prefWidth="246.0" style="-fx-border-color: #004D40; -fx-border-radius: 10px; -fx-background-color: white; -fx-background-radius: 10px;">
          <children>
             <ImageView fitHeight="48.0" fitWidth="42.0" layoutX="14.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -146,7 +145,7 @@
             </DropShadow>
          </effect>
       </AnchorPane>
-      <AnchorPane layoutX="510.0" layoutY="432.0" prefHeight="91.0" prefWidth="246.0" style="-fx-border-color: #004D40; -fx-border-radius: 10px; -fx-background-color: white; -fx-background-radius: 10px;">
+      <AnchorPane layoutX="510.0" layoutY="432.0" onMouseClicked="#latestFeedbackOnMouseClick" prefHeight="91.0" prefWidth="246.0" style="-fx-border-color: #004D40; -fx-border-radius: 10px; -fx-background-color: white; -fx-background-radius: 10px;">
          <children>
             <ImageView fitHeight="48.0" fitWidth="42.0" layoutX="14.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
                <image>

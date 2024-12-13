@@ -13,7 +13,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 
 public class LogisticManagerDashbordViewPageController {
     
@@ -85,6 +84,7 @@ public class LogisticManagerDashbordViewPageController {
         MotherOfAllClasses.addHoverEffect(homeSideBar, informationSideBar, inventorySideBar, financeSideBar, feedbackSideBar, accountSettingsSideBar, logOutSideBar);
         MotherOfAllClasses.mouseEnterEffectMinimizeButton(WindowMinimizeButton);
         MotherOfAllClasses.mouseEnterEffectExitButton(WindowCloseButton);
+        MotherOfAllClasses.borderPaneCenterChange(LogisticManagerDashbordBorderpane, "/user_dashboard_designs/logistic_manger_dashboard/LogisticManagerDashbordHomepage.fxml");
 
         collapseSideBar();
 
@@ -158,11 +158,6 @@ public class LogisticManagerDashbordViewPageController {
     }
 
     @FXML
-    void searchOnMouseClick(MouseEvent event) {
-
-    }
-
-    @FXML
     void minimizeOnAction(ActionEvent event) {
         MotherOfAllClasses.minimizeButton(event);
     }
@@ -171,5 +166,4 @@ public class LogisticManagerDashbordViewPageController {
     void closeOnActionButton(ActionEvent event) {
         System.exit(0);
     }
-
 }

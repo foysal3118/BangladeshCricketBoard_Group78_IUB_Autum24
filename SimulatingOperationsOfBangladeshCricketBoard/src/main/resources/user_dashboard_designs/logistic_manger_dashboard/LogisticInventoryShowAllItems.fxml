@@ -7,24 +7,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogisticInventoryShowAllItemsController">
    <children>
-      <TextField fx:id="searchTextField" layoutX="66.0" layoutY="77.0" prefHeight="28.0" prefWidth="231.0" promptText="Search" style="-fx-background-radius: 20;">
+      <TextField fx:id="searchTextField" layoutX="63.0" layoutY="30.0" prefHeight="28.0" prefWidth="231.0" promptText="Search" style="-fx-background-radius: 20;">
          <font>
             <Font name="Arial" size="12.0" />
          </font>
       </TextField>
-      <Button layoutX="330.0" layoutY="72.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="23.0" prefWidth="73.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Load" textFill="WHITE">
+      <Button layoutX="327.0" layoutY="25.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="23.0" prefWidth="73.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Load" textFill="WHITE">
          <font>
             <Font name="Candara" size="17.0" />
          </font>
       </Button>
-      <TableView editable="true" layoutX="59.0" layoutY="129.0" prefHeight="405.0" prefWidth="349.0" style="-fx-background-color: transparent;">
+      <TableView fx:id="showAllItemsTableView" editable="true" layoutX="10.0" layoutY="87.0" prefHeight="432.0" prefWidth="427.0" style="-fx-background-color: transparent;">
          <columns>
-            <TableColumn prefWidth="135.99996948242188" text="Item Name" />
-            <TableColumn prefWidth="88.0" text="Quantity" />
-            <TableColumn prefWidth="124.6666259765625" text="Added Date" />
+            <TableColumn fx:id="itemNameTableColume" prefWidth="105.60003662109375" text="Item Name" />
+            <TableColumn fx:id="itemQuantityTableView" prefWidth="59.99993896484375" text="Quantity" />
+            <TableColumn fx:id="addedDateTableColume" minWidth="0.0" prefWidth="98.39996337890625" text="Added Date" />
+            <TableColumn fx:id="descriptionTableColume" prefWidth="163.20001220703125" text="Description" />
          </columns>
       </TableView>
    </children>

@@ -5,36 +5,26 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 
-public class LogisticManagerFeedbackDashbordController {
-
-    @FXML
-    private TableColumn<?, ?> commentTableColume;
-
-    @FXML
-    private TextField commentTextField;
+public class LogisticInformationHistory {
 
     @FXML
     private TableColumn<?, ?> dateTableView;
 
     @FXML
-    private TableView<?> feedBackTableView;
+    private TableColumn<?, ?> descriptionTableView;
 
     @FXML
     private ComboBox<?> filterComboBox;
 
     @FXML
-    private TableColumn<?, ?> userTableColume;
+    private TableView<?> historyTableView;
+
+    @FXML
+    private TableColumn<?, ?> idTableView;
 
     @FXML
     void loadOnActionButton(ActionEvent event) {
-
-    }
-
-    @FXML
-    void sendOnActionButton(MouseEvent event) {
 
     }
 }

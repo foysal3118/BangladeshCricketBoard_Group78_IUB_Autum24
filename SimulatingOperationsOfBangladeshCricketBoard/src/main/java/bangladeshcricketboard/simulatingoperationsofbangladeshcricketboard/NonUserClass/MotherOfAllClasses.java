@@ -1,5 +1,7 @@
 package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.BcbMainApplicationClass;
@@ -9,6 +11,7 @@ import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
@@ -21,6 +24,18 @@ public class MotherOfAllClasses {
 
     private static double xOffSet = 0;
     private static double yOffSet = 0;
+
+    public static void sceneSwithcer(MouseEvent event, String fxmlPath){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource(fxmlPath));
+            Parent root = fxmlLoader.load();
+            Scene scene = new Scene(root);
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            setStageAndSetupDrag(stage, root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {}
+    }
 
     public static void logout(MouseEvent event){
         try {
@@ -132,5 +147,24 @@ public class MotherOfAllClasses {
             FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource(fxmlPath));
             borderPane.setCenter(fxmlLoader.load());
         } catch (IOException e) {}
+    }
+
+    public static void sendFile(String filePath, String ... content) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
+            for (String string : content) {
+                writer.write(string + ",");
+            }
+            reciver(filePath);
+            writer.close();
+        } catch (Exception e) {
+        }
+    }
+
+    public  static void reciver(String filePath) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("New File Recived");
+        alert.setHeaderText("A new file has been recived");
+        alert.showAndWait();
     }
 }
