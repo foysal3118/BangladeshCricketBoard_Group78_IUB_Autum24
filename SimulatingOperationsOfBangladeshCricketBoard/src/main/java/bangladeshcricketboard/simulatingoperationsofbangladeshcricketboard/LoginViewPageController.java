@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -19,10 +20,15 @@ public class LoginViewPageController {
 
     @FXML
     private TextField LogInUserIDTextField;
+    @FXML
+    private Button WindowMinimizeButton;
+    @FXML
+    private Button WindowCloseButton;
 
     @FXML
     public void initialize() {
-        // This method will be called when the FXML is loaded
+        MotherOfAllClasses.mouseEnterEffectMinimizeButton(WindowMinimizeButton);
+        MotherOfAllClasses.mouseEnterEffectExitButton(WindowCloseButton);
     }
 
     @FXML
@@ -62,9 +68,7 @@ public class LoginViewPageController {
     }
 
     @FXML
-    void LoginPageMinimizeButtonOnAction(ActionEvent event) {
-        Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-        stage.setIconified(true);
+    public void minimizeOnAction(ActionEvent actionEvent) {
+        MotherOfAllClasses.minimizeButton(actionEvent);
     }
-
 }
