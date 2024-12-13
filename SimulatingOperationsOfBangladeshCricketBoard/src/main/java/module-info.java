@@ -15,8 +15,8 @@ module bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard {
     opens bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager to javafx.fxml, javafx.base;
     opens bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.FinanceOfficer to javafx.fxml, javafx.base;
     opens bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.SalesManager to javafx.fxml, javafx.base;
-   //opens bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager to javafx.base;
-
+    opens bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.ScheduleManger to javafx.fxml, javafx.base;
+    opens bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.BoardPresident to javafx.fxml, javafx.base;
     // Optionally, you can open the base package too
     opens bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard to javafx.fxml;
     exports bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard;

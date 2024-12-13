@@ -1,11 +1,14 @@
 package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.ScheduleManger;
 
+import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass.MotherOfAllClasses;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 
 public class ScheduleManagerDashBoardDesignController
 {
@@ -36,75 +39,70 @@ public class ScheduleManagerDashBoardDesignController
     @javafx.fxml.FXML
     private AnchorPane logOutSideBar;
     @javafx.fxml.FXML
-    private AnchorPane NotificationsSideBar;
-    @javafx.fxml.FXML
     private AnchorPane ScheduleSideBar;
-    @javafx.fxml.FXML
-    private Label NotificationsLabel;
     @javafx.fxml.FXML
     private Label ScheduleLabel;
     @javafx.fxml.FXML
-    private Label NotificationsLabel1;
+    private AnchorPane UpdateLabelSideBar;
     @javafx.fxml.FXML
-    private AnchorPane NotificationsSideBar1;
+    private Label UpdateLabel;
+    @FXML
+    private BorderPane ScheduleManagerBorderpane;
 
     @javafx.fxml.FXML
     public void initialize() {
+        MotherOfAllClasses.addHoverEffect(homeSideBar,financeSideBar,accountSettingsSideBar,logOutSideBar,ScheduleSideBar,UpdateLabelSideBar);
+        MotherOfAllClasses.mouseEnterEffectMinimizeButton(WindowMinimizeButton);
+        MotherOfAllClasses.mouseEnterEffectExitButton(WindowCloseButton);
+        collapseSideBar();
+        leftSideBar.setOnMouseEntered(event -> expandSideBar());
+        leftSideBar.setOnMouseExited(event -> collapseSideBar());
     }
-
+    private void collapseSideBar(){
+        MotherOfAllClasses.anchorPaneCollapse(homeSideBar,financeSideBar,accountSettingsSideBar,logOutSideBar,ScheduleSideBar,UpdateLabelSideBar,leftSideBar);
+        MotherOfAllClasses.labelCollapse(homeLabel,ScheduleLabel,UpdateLabel,financeLabel,accountsettingsLabel,logOutLabel);
+        MotherOfAllClasses.hideAllLabels(homeLabel,ScheduleLabel,UpdateLabel,financeLabel,accountsettingsLabel,logOutLabel);
+    }
+    private void expandSideBar() {
+        MotherOfAllClasses.labelExpand(homeLabel,ScheduleLabel,UpdateLabel,financeLabel,accountsettingsLabel,logOutLabel);
+        MotherOfAllClasses.anchorPaneExpand(homeSideBar,financeSideBar,accountSettingsSideBar,logOutSideBar,ScheduleSideBar,UpdateLabelSideBar,leftSideBar);
+        MotherOfAllClasses.showAllLabels(homeLabel,ScheduleLabel,UpdateLabel,financeLabel,accountsettingsLabel,logOutLabel);
+    }
     @javafx.fxml.FXML
-    public void minimizeOnAction(ActionEvent actionEvent) {
+    public void minimizeOnAction(ActionEvent event) {
+        MotherOfAllClasses.minimizeButton(event);
     }
-
-    @javafx.fxml.FXML
-    public void homeOnMouseClick(Event event) {
-    }
-
     @javafx.fxml.FXML
     public void closeOnActionButton(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void financeOnMouseClick(Event event) {
-    }
-
-    @Deprecated
-    public void searchOnMouseClick(Event event) {
-    }
-
-    @Deprecated
-    public void feedbackOnMouseClick(Event event) {
-    }
-
-    @Deprecated
-    public void inventoryOnMouseClick(Event event) {
+        System.exit(0);
     }
 
     @javafx.fxml.FXML
-    public void logOutOnMouseClick(Event event) {
-    }
-
-    @Deprecated
-    public void accountSettingOnMouseClick(Event event) {
-    }
-
-    @Deprecated
-    public void informationOnMouseClick(Event event) {
-    }
-
-    @javafx.fxml.FXML
-    public void NotificationsSideBarOnMouseClick(Event event) {
+    public void logOutOnMouseClick(MouseEvent event) {
+        MotherOfAllClasses.logout(event);
     }
 
     @javafx.fxml.FXML
     public void accountSettingsSideBarOnMouseClick(Event event) {
+        MotherOfAllClasses.borderPaneCenterChange(ScheduleManagerBorderpane, "/CommonFXMLDesigns/AccountSettings.fxml");
     }
 
     @javafx.fxml.FXML
     public void financeSideBarOnMouseClick(Event event) {
+        MotherOfAllClasses.borderPaneCenterChange(ScheduleManagerBorderpane, "/user_dashboard_designs/ScheduleManagerDashBoard/FinanceOptionScheduleManagerDashBoard.fxml");
     }
 
     @javafx.fxml.FXML
     public void ScheduleSideBarOnMouseClick(Event event) {
+        MotherOfAllClasses.borderPaneCenterChange(ScheduleManagerBorderpane, "/user_dashboard_designs/ScheduleManagerDashBoard/ScheduleOptionScheduleManagerDashboard.fxml");
+    }
+
+    @javafx.fxml.FXML
+    public void homeSideBarOnMouseClick(Event event) {
+    }
+
+    @javafx.fxml.FXML
+    public void UpdateLabelSideBarOnMouseClick(Event event) {
+        MotherOfAllClasses.borderPaneCenterChange(ScheduleManagerBorderpane, "/user_dashboard_designs/ScheduleManagerDashBoard/UpdateOptionSheduleManagerDashBoard.fxml");
     }
 }

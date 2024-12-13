@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
-public class SetMatchTImeViewPageController
+public class BookASlotViewPageController
 {
     @javafx.fxml.FXML
     private TextField opponentTeamNameTextField;

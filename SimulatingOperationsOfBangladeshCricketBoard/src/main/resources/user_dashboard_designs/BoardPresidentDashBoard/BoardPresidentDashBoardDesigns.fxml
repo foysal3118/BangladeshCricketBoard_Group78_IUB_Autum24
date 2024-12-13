@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.BoardPresident.BoardPresidentDashBoardDesignsController">
+<BorderPane fx:id="BoardPresidentDashBoardBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.BoardPresident.BoardPresidentDashBoardDesignsController">
    <top>
       <AnchorPane prefHeight="78.0" prefWidth="900.0" style="-fx-background-color: #004D40;" BorderPane.alignment="CENTER">
          <children>
@@ -17,7 +17,7 @@
                   <Image url="@imageUsedForfxml/politician.png" />
                </image>
             </ImageView>
-            <Label layoutX="75.0" layoutY="31.0" prefHeight="71.0" prefWidth="138.0" text="Board President" textAlignment="CENTER" textFill="#fff1f1" wrapText="true">
+            <Label layoutX="76.0" layoutY="31.0" prefHeight="71.0" prefWidth="138.0" text="Board President" textAlignment="CENTER" textFill="#fff1f1" wrapText="true">
                <font>
                   <Font name="Arial Bold" size="29.0" />
                </font>
@@ -71,7 +71,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="financeSideBar" layoutX="1.0" layoutY="158.0" onMouseClicked="#financeOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
+            <AnchorPane fx:id="financeSideBar" layoutX="1.0" layoutY="158.0" onMouseClicked="#financeSideBarOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
                <children>
                   <Label fx:id="financeLabel" layoutX="58.0" layoutY="13.0" text="Finance" textFill="WHITE">
                      <font>
@@ -85,9 +85,9 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="inventorySideBar" layoutX="1.0" layoutY="96.0" onMouseClicked="#inventoryOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
+            <AnchorPane fx:id="AppointmentsSideBar" layoutX="1.0" layoutY="96.0" onMouseClicked="#AppointmentsSideBarOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
                <children>
-                  <Label fx:id="inventoryLabel" layoutX="59.0" layoutY="13.0" text="Appointments" textFill="WHITE">
+                  <Label fx:id="AppointmentsLabel" layoutX="59.0" layoutY="13.0" text="Appointments" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="20.0" />
                      </font>
@@ -99,9 +99,9 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="informationSideBar" layoutX="1.0" layoutY="220.0" onMouseClicked="#informationOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
+            <AnchorPane fx:id="MatchInfoSideBar" layoutX="1.0" layoutY="220.0" onMouseClicked="#MatchInfoSideBarOnMouseClick" prefHeight="51.0" prefWidth="214.0" style="-fx-cursor: hand;">
                <children>
-                  <Label fx:id="informationLabel" layoutX="57.0" layoutY="13.0" text="Match Info" textFill="WHITE">
+                  <Label fx:id="MatchInfoLabel" layoutX="57.0" layoutY="13.0" text="Match Info" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="23.0" />
                      </font>

@@ -7,41 +7,14 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.ScheduleManger.ScheduleFinanceOptionDashBoardController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.ScheduleManger.FinanceOptionScheduleManagerDashBoardController">
    <right>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <AnchorPane layoutX="18.0" layoutY="67.0" onMouseClicked="#UpdateBudgetOnMouseClick" prefHeight="91.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
-               <effect>
-                  <DropShadow>
-                     <color>
-                        <Color green="0.3019607961177826" blue="0.250980406999588" />
-                     </color>
-                  </DropShadow>
-               </effect>
-               <children>
-                  <ImageView fitHeight="43.0" fitWidth="48.0" layoutX="62.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imageUsedForfxml/earning.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="18.0" layoutY="58.0" text="Update Budget">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </right>
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">

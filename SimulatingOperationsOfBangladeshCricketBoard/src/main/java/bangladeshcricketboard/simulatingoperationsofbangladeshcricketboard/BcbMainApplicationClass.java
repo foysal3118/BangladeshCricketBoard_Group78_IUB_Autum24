@@ -22,7 +22,6 @@ public class BcbMainApplicationClass extends Application {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         MotherOfAllClasses.setStageAndSetupDrag(stage, root);
-
         stage.setScene(scene);
         stage.show();
     }
