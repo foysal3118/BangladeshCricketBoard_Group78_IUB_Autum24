@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.PurchasingCoordinatorDashBoardDesignController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.PurchasingCoordinator.PurchasingCoordinatorDashBoardDesignController">
    <top>
       <AnchorPane prefHeight="78.0" prefWidth="900.0" style="-fx-background-color: #004D40;" BorderPane.alignment="CENTER">
          <children>
@@ -26,9 +26,9 @@
                   <Image url="@LogisticManagerDashboard_images/courier.png" />
                </image>
             </ImageView>
-            <Label layoutX="66.0" layoutY="32.0" prefHeight="71.0" prefWidth="138.0" text="Logistic Manager" textAlignment="CENTER" textFill="#fff1f1" wrapText="true">
+            <Label layoutX="75.0" layoutY="37.0" prefHeight="71.0" prefWidth="138.0" text="Purchasing Coordinator" textAlignment="CENTER" textFill="#fff1f1" wrapText="true">
                <font>
-                  <Font name="Bookshelf Symbol 7" size="27.0" />
+                  <Font name="Arial Bold" size="24.0" />
                </font>
             </Label>
             <TextField fx:id="searchTextField" layoutX="310.0" layoutY="59.0" prefHeight="33.0" prefWidth="232.0" promptText="Search" style="-fx-background-radius: 20;">

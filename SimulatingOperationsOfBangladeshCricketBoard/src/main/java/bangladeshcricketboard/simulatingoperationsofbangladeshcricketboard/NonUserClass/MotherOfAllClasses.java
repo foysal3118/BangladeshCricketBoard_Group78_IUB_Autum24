@@ -91,7 +91,6 @@ public class MotherOfAllClasses {
                 button.setStyle("-fx-background-color: #B0BEC5;");
                 button.setCursor(Cursor.HAND);
             });
-
             button.setOnMouseExited(event -> {
                 button.setTextFill(Color.web("#000000"));
                 button.setStyle("-fx-background-color: #ffffff;");
@@ -105,7 +104,6 @@ public class MotherOfAllClasses {
                 anchorPane.setStyle("-fx-background-color:  #546E7A;");
                 anchorPane.setCursor(Cursor.HAND);
             });
-
             anchorPane.setOnMouseExited(event -> {
                 anchorPane.setStyle("-fx-background-color:  #004D40;");
             });
@@ -118,7 +116,6 @@ public class MotherOfAllClasses {
         xOffSet = event.getSceneX();
         yOffSet = event.getSceneY();
         });
-
         root.setOnMouseDragged(event -> {
             stage.setX(event.getScreenX() - xOffSet);
             stage.setY(event.getScreenY() - yOffSet);
