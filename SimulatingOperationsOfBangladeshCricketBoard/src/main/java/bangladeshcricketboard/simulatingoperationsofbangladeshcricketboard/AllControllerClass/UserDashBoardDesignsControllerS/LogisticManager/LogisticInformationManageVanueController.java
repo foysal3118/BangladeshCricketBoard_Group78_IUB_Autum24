@@ -2,33 +2,24 @@ package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllC
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
-public class LogisticFinanceBudgetRequestController {
+public class LogisticInformationManageVanueController {
 
     @FXML
     private TextArea descriptionTextArea;
 
     @FXML
-    private Label fileNameLabel;
+    private Label fileLabel;
 
     @FXML
-    private ComboBox<String> requestIdComboBox;
-
-    @FXML
-    void chooseFileOnActionButton(ActionEvent event) {
+    void choosefile(ActionEvent event) {
 
     }
 
     @FXML
-    void sendRequestOnActionButton(ActionEvent event) {
-
-    }
-
-    @FXML
-    void updateBudgetOnActionButton(ActionEvent event) {
+    void sendToOnActionButton(ActionEvent event) {
 
     }
 

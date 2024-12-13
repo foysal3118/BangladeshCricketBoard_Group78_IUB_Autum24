@@ -5,7 +5,6 @@ import java.io.IOException;
 import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.BcbMainApplicationClass;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
@@ -15,7 +14,12 @@ public class LogisticManagerInformationDashbordController {
     private BorderPane logisticInformationBorderpane;
 
     @FXML
-    private TextField searchTextField;
+    public void initialize() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/logistic_manger_dashboard/LogisticInformationMatchDates.fxml"));
+            logisticInformationBorderpane.setCenter(fxmlLoader.load());
+        } catch (IOException e) {}
+    }
 
     @FXML
     void historyOnMouseClick(MouseEvent event) {
@@ -39,11 +43,6 @@ public class LogisticManagerInformationDashbordController {
             FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/logistic_manger_dashboard/LogisticInformationMatchDates.fxml"));
             logisticInformationBorderpane.setCenter(fxmlLoader.load());
         } catch (IOException e) {}
-    }
-
-    @FXML
-    void searchOnMouseClick(MouseEvent event) {
-
     }
 
     @FXML

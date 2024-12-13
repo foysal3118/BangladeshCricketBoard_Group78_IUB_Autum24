@@ -3,7 +3,6 @@ package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllC
 import java.io.IOException;
 
 import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.BcbMainApplicationClass;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.input.MouseEvent;
@@ -15,7 +14,7 @@ public class LogisticManagerFinanceDashbordController {
     private BorderPane LogisticFinanceBorderpan;
 
     @FXML
-    void budgetRequestOnMouseClick(MouseEvent event) {
+    public void initialize() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/logistic_manger_dashboard/LogisticFinanceBudgetRequest.fxml"));
             LogisticFinanceBorderpan.setCenter(fxmlLoader.load());
@@ -23,8 +22,11 @@ public class LogisticManagerFinanceDashbordController {
     }
 
     @FXML
-    void chooseFileOnActionButton(ActionEvent event) {
-
+    void budgetRequestOnMouseClick(MouseEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/logistic_manger_dashboard/LogisticFinanceBudgetRequest.fxml"));
+            LogisticFinanceBorderpan.setCenter(fxmlLoader.load());
+        } catch (IOException e) {}
     }
 
     @FXML
@@ -41,16 +43,6 @@ public class LogisticManagerFinanceDashbordController {
             FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/logistic_manger_dashboard/LogisticFinanceRequestStatus.fxml"));
             LogisticFinanceBorderpan.setCenter(fxmlLoader.load());
         } catch (IOException e) {}
-    }
-
-    @FXML
-    void sendRequestOnActionButton(ActionEvent event) {
-
-    }
-
-    @FXML
-    void updateBudgetOnActionButton(ActionEvent event) {
-
     }
 
     @FXML

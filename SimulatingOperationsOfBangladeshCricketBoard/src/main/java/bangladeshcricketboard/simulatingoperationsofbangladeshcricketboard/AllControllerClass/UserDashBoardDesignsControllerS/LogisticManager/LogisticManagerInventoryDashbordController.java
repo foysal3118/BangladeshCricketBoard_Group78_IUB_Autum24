@@ -1,9 +1,7 @@
 package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager;
 
 import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass.MotherOfAllClasses;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
@@ -13,7 +11,9 @@ public class LogisticManagerInventoryDashbordController {
     private BorderPane LogisticInventoryBorderpane;
 
     @FXML
-    private TextField searchTextField;
+    public void initialize() {
+        MotherOfAllClasses.borderPaneCenterChange(LogisticInventoryBorderpane, "/user_dashboard_designs/logistic_manger_dashboard/LogisticInventoryShowAllItems.fxml");
+    }
 
     @FXML
     void inventoryAddItemsOnMouseClick(MouseEvent event) {
@@ -23,11 +23,6 @@ public class LogisticManagerInventoryDashbordController {
     @FXML
     void inventoryItemListOnMouseClick(MouseEvent event) {
         MotherOfAllClasses.borderPaneCenterChange(LogisticInventoryBorderpane, "/user_dashboard_designs/logistic_manger_dashboard/LogisticInventoryItemList.fxml");
-    }
-
-    @FXML
-    void inventoryLoadOnActionButton(ActionEvent event) {
-
     }
 
     @FXML

@@ -9,52 +9,52 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogisticInventoryItemListController">
    <children>
-      <Label layoutX="73.0" layoutY="51.0" text="Item Name:">
+      <Label layoutX="73.0" layoutY="40.0" text="Item Name:">
          <font>
             <Font name="Candara" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="208.0" layoutY="45.0" style="-fx-border-width: 0 0 2px 0; -fx-background-color: transparent; -fx-border-color: #004D40;">
+      <TextField fx:id="itemNameTextField" layoutX="208.0" layoutY="34.0" style="-fx-border-width: 0 0 2px 0; -fx-background-color: transparent; -fx-border-color: #004D40;">
          <font>
             <Font size="13.0" />
          </font>
       </TextField>
-      <Label layoutX="74.0" layoutY="104.0" text="Quantity:">
+      <Label layoutX="74.0" layoutY="93.0" text="Quantity:">
          <font>
             <Font name="Candara" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="209.0" layoutY="98.0" style="-fx-border-width: 0 0 2px 0; -fx-background-color: transparent; -fx-border-color: #004D40;">
+      <TextField fx:id="quantityTextField" layoutX="209.0" layoutY="87.0" style="-fx-border-width: 0 0 2px 0; -fx-background-color: transparent; -fx-border-color: #004D40;">
          <font>
             <Font size="13.0" />
          </font>
       </TextField>
-      <Label layoutX="74.0" layoutY="156.0" text="Priority:">
+      <Label layoutX="74.0" layoutY="145.0" text="Priority:">
          <font>
             <Font name="Candara" size="18.0" />
          </font>
       </Label>
-      <ComboBox layoutX="208.0" layoutY="150.0" prefHeight="27.0" prefWidth="161.0" promptText="Select Option" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
-      <Label layoutX="73.0" layoutY="208.0" text="Devlivery Date:">
+      <ComboBox fx:id="priorityComboBox" layoutX="208.0" layoutY="139.0" prefHeight="27.0" prefWidth="161.0" promptText="Select Option" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <Label layoutX="73.0" layoutY="197.0" text="Devlivery Date:">
          <font>
             <Font name="Candara" size="18.0" />
          </font>
       </Label>
-      <DatePicker layoutX="206.0" layoutY="207.0" prefHeight="27.0" prefWidth="161.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 2px 0; -fx-border-color: #004D40;" />
-      <TextArea layoutX="74.0" layoutY="288.0" prefHeight="124.0" prefWidth="300.0" promptText="Item descriptions..." />
-      <Label layoutX="73.0" layoutY="259.0" text="Description:">
+      <DatePicker fx:id="deliveryDatePicker" layoutX="206.0" layoutY="196.0" prefHeight="27.0" prefWidth="161.0" style="-fx-background-color: transparent; -fx-border-width: 0 0 2px 0; -fx-border-color: #004D40; -fx-cursor: hand;" />
+      <TextArea fx:id="descriptionTexField" layoutX="74.0" layoutY="277.0" prefHeight="124.0" prefWidth="300.0" promptText="Item descriptions..." />
+      <Label layoutX="73.0" layoutY="248.0" text="Description:">
          <font>
             <Font name="Candara" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="178.0" layoutY="436.0" mnemonicParsing="false" style="-fx-background-color: #004D40; -fx-background-radius: 20px;" text="Create List" textFill="WHITE">
+      <Button layoutX="178.0" layoutY="425.0" mnemonicParsing="false" onAction="#createListOnActionButton" style="-fx-background-color: #004D40; -fx-background-radius: 20px; -fx-cursor: hand;" text="Create List" textFill="WHITE">
          <font>
             <Font name="Candara" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="98.0" layoutY="490.0" mnemonicParsing="false" style="-fx-background-color: #800000; -fx-background-radius: 20px;" text="Send to Purchasing Coordinator" textFill="WHITE">
+      <Button layoutX="98.0" layoutY="479.0" mnemonicParsing="false" onAction="#sendToOnActionButton" style="-fx-background-color: #800000; -fx-background-radius: 20px; -fx-cursor: hand;" text="Send to Purchasing Coordinator" textFill="WHITE">
          <font>
             <Font name="Candara" size="18.0" />
          </font>
