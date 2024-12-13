@@ -11,7 +11,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="543.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.BoardPresident.AnnualBudgetViewPageController">
    <children>
       <Label layoutX="127.0" layoutY="14.0" text="Annual Budget Review" textAlignment="CENTER">
@@ -31,7 +30,7 @@
             <TableColumn prefWidth="77.0" text="Year" />
         </columns>
       </TableView>
-      <Button layoutX="250.0" layoutY="295.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="169.0" style="-fx-background-color: #004D40; -fx-cursor: hand;" text="Load sponsers Details" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Button layoutX="250.0" layoutY="295.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="169.0" style="-fx-background-color: #004D40; -fx-cursor: hand;" text="Load Budgets" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>

@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.BcbMainApplicationClass;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
@@ -33,7 +34,6 @@ public class MotherOfAllClasses {
             stage.show();
         } catch (IOException e) {}
     }
-
     public static void anchorPaneExpand(AnchorPane ... anchorPanes){
         for (AnchorPane anchorPane : anchorPanes) {
             anchorPane.setPrefWidth(165);
@@ -77,7 +77,6 @@ public class MotherOfAllClasses {
                 button.setCursor(Cursor.HAND);
                 button.setTextFill(Color.web("#ffffff"));
             });
-
             button.setOnMouseExited(event -> {
                 button.setTextFill(Color.web("#f21212"));
                 button.setStyle("-fx-background-color: #ffffff;");
