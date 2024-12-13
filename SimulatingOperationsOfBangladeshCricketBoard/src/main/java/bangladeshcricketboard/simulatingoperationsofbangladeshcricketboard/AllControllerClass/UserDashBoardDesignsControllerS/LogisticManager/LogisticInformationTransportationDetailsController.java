@@ -83,7 +83,7 @@ public class LogisticInformationTransportationDetailsController {
         alert.showAndWait();
 
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("TransportationDetails.txt", true));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\TransportationDetails.txt", true));
             writer.write(coachNoTextfield.getText() + "," + coachType + "," + departureDatePicker.getValue() + "," + departureTimeTextfield.getText() + "," + locationTextField.getText() + "," + stadiumTextfield.getText());
             writer.close();
         } catch (Exception e) {

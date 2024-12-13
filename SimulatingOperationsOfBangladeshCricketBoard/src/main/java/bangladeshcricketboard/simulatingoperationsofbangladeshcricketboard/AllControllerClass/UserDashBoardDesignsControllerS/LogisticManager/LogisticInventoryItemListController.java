@@ -71,13 +71,8 @@ public class LogisticInventoryItemListController {
 
 
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("ItemsList.txt", true));
-            writer.write("Item Name: " + itemNameTextField.getText());
-            writer.write("\nQuantity: " + quantityTextField.getText());
-            writer.write("\nPriority: " + priorityComboBox.getValue());
-            writer.write("\nDelivery Date: " + deliveryDatePicker.getValue());
-            writer.write("\nDescription: " + descriptionTexField.getText());
-            writer.write("\n\n");
+            BufferedWriter writer = new BufferedWriter(new FileWriter("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\ItemsList.txt", true));
+            writer.write(itemNameTextField.getText() + "," + quantityTextField.getText() + "," + priorityComboBox.getValue() + "," + deliveryDatePicker.getValue() + "," + descriptionTexField.getText());
             writer.close();
         } catch (Exception e) {}
     }

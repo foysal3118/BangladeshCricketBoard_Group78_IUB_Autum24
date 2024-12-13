@@ -55,8 +55,9 @@ public class LogisticInventoryAddItemsController {
         alert.setContentText("Item Name: " + inventory.getItemName() + "\nQuantity: " + inventory.getQuantity() + "\nAdded Date: " + inventory.getAddDate() + "\nDescription: " + inventory.getDescription());
         alert.showAndWait();
 
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("inventory.txt", true))) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\Inventory.txt", true))) {
             bufferedWriter.write(inventory.getItemName() + "," + inventory.getQuantity() + "," + inventory.getAddDate() + "," + inventory.getDescription() + "\n");
+            bufferedWriter.close();
         } catch (IOException e) {}
     }
 }

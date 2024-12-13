@@ -65,7 +65,7 @@ public class LogisticInventoryShowAllItemsController {
         String search = searchTextField.getText().toLowerCase();
         if (search.isEmpty()) {
             showAllItemsTableView.getItems().clear();
-            showAllItemsTableView.getItems().addAll(textFileLoader("inventory.txt"));
+            showAllItemsTableView.getItems().addAll(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\Inventory.txt"));
             return;
         }
 
