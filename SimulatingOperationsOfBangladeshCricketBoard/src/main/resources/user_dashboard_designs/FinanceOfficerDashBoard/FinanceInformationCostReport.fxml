@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.FinanceOfficer.FinanceInformationCostReportController">
    <children>
       <Label layoutX="22.0" layoutY="47.0" text="Description:">
@@ -14,18 +13,18 @@
             <Font name="Candara" size="22.0" />
          </font>
       </Label>
-      <TextArea layoutX="21.0" layoutY="81.0" prefHeight="200.0" prefWidth="405.0" />
-      <Button layoutX="22.0" layoutY="297.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="33.0" prefWidth="122.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Choose File" textFill="WHITE">
+      <TextArea fx:id="descriptionTextarea" layoutX="21.0" layoutY="81.0" prefHeight="200.0" prefWidth="405.0" />
+      <Button layoutX="22.0" layoutY="297.0" mnemonicParsing="false" onAction="#chooseFileOnActionButton" prefHeight="33.0" prefWidth="122.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Choose File" textFill="WHITE">
          <font>
             <Font name="Candara" size="17.0" />
          </font>
       </Button>
-      <Label layoutX="158.0" layoutY="300.0" text="File.pdf">
+      <Label fx:id="filetextLabel" layoutX="158.0" layoutY="300.0" text="File.pdf">
          <font>
             <Font name="Candara" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="120.0" layoutY="376.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="34.0" prefWidth="206.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #800000; -fx-cursor: hand;" text="Send to Bord President" textFill="WHITE">
+      <Button layoutX="120.0" layoutY="376.0" mnemonicParsing="false" onAction="#sendToOnActionButton" prefHeight="34.0" prefWidth="206.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #800000; -fx-cursor: hand;" text="Send to Bord President" textFill="WHITE">
          <font>
             <Font name="Candara" size="17.0" />
          </font>

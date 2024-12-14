@@ -1,7 +1,6 @@
 package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.FinanceOfficer;
 
 import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass.MotherOfAllClasses;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
@@ -12,13 +11,13 @@ public class FinanceInvestorDashbordController {
     private BorderPane financeInvestorDashbordBorderPane;
 
     @FXML
-    void addSponserOnMouseClick(MouseEvent event) {
+    public void initialize() {
         MotherOfAllClasses.borderPaneCenterChange(financeInvestorDashbordBorderPane, "/user_dashboard_designs/FinanceOfficerDashBoard/FinanceInvestorsAddSponsers.fxml");
     }
 
     @FXML
-    void inventoryLoadOnActionButton(ActionEvent event) {
-
+    void addSponserOnMouseClick(MouseEvent event) {
+        MotherOfAllClasses.borderPaneCenterChange(financeInvestorDashbordBorderPane, "/user_dashboard_designs/FinanceOfficerDashBoard/FinanceInvestorsAddSponsers.fxml");
     }
 
     @FXML

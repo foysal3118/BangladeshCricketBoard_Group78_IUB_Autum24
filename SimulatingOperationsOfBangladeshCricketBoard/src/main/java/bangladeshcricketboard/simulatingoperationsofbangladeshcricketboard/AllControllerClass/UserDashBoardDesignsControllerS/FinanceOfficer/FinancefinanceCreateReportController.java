@@ -4,8 +4,10 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 
+import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass.MotherOfAllClasses;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -24,10 +26,23 @@ public class FinancefinanceCreateReportController {
     private TextField projectNameTextField;
 
     @FXML
-    private ComboBox<?> selectIdComboBox;
+    private ComboBox<String> selectIdComboBox;
 
     @FXML
     private TextField totalBudgetTextfield;
+
+    @FXML
+    public void initialize() {
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\SendToBordPresidentFinanceReport.txt"));
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                String[] data = line.split(",");
+                selectIdComboBox.getItems().add(data[0]);
+            }
+        } catch (Exception e) {
+        }
+    }
 
     @FXML
     void createOnActionButton(ActionEvent event) {
@@ -41,22 +56,29 @@ public class FinancefinanceCreateReportController {
             return;
         }
 
-        Random rand = new Random();
-        int id = rand.nextInt(1000);
+        int id = MotherOfAllClasses.getLastID(300, "BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\SendToBordPresidentFinanceReport.txt");
+    
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Success");
         alert.setHeaderText("Report Created Successfully");
-        alert.setContentText("Report ID: "+ id + "Project Name: " + projectNameTextField.getText() + "\nProject ID: " + projectIdTextField.getText() + "\nTotal Budget: " + totalBudgetTextfield.getText() + "\nCategory: " + categoryTextField.getText());
+        alert.setContentText("Report ID: " + id + " Project Name: " + projectNameTextField.getText() + "\nProject ID: " + projectIdTextField.getText() + "\nTotal Budget: " + totalBudgetTextfield.getText() + "\nCategory: " + categoryTextField.getText());
         alert.showAndWait();
 
-
+        
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\SendToBordPresidentFinanceReport.txt", true));
             writer.write(id + "," + projectNameTextField.getText() + "," + projectIdTextField.getText() + "," + totalBudgetTextfield.getText() + "," +categoryTextField.getText() + "\n");
             writer.close();
         } catch (Exception e) {
         }
+
+        selectIdComboBox.getItems().add(String.valueOf(id));
+
+        projectIdTextField.clear();
+        projectNameTextField.clear();
+        totalBudgetTextfield.clear();
+        categoryTextField.clear();
     }
 
     @FXML
@@ -72,21 +94,41 @@ public class FinancefinanceCreateReportController {
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Success");
-        alert.setHeaderText("Report Saved Successfully");
-        alert.setContentText("Report ID: " + selectIdComboBox.getValue());
+        alert.setHeaderText("Report updated Successfully");
+        alert.setContentText("Report ID: " + selectIdComboBox.getValue() + " Project Name: " + projectNameTextField.getText() + "\nProject ID: " + projectIdTextField.getText() + "\nTotal Budget: " + totalBudgetTextfield.getText() + "\nCategory: " + categoryTextField.getText());
         alert.showAndWait();
 
-        try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\SendToBordPresidentFinanceReport.txt"));
-            String line;
-            
-        } catch (Exception e) {
-        }
+        List<String> lines = new ArrayList<>(); 
+        String newLine = selectIdComboBox.getValue() + "," + projectNameTextField.getText() + "," + projectIdTextField.getText() + "," + totalBudgetTextfield.getText() + "," + categoryTextField.getText(); 
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\SendToBordPresidentFinanceReport.txt"))) { 
+            String line; 
+            while ((line = bufferedReader.readLine()) != null) { 
+                if (line.startsWith(selectIdComboBox.getValue())) { 
+                    line = newLine; 
+                } 
+                lines.add(line); 
+            } 
+        } catch (Exception e) { e.printStackTrace(); 
+
+        } try (BufferedWriter writer = new BufferedWriter(new FileWriter("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\SendToBordPresidentFinanceReport.txt"))) { 
+            for (String line : lines) { 
+                writer.write(line); writer.newLine(); 
+            } 
+        } catch (Exception e) { 
+                e.printStackTrace(); 
+            }
+        
+
+            projectIdTextField.clear();
+            projectNameTextField.clear();
+            totalBudgetTextfield.clear();
+            categoryTextField.clear();
+            selectIdComboBox.setValue(null);
     }
 
     @FXML
     void sendToOnActionButton(ActionEvent event) {
-
+        
     }
 
 }

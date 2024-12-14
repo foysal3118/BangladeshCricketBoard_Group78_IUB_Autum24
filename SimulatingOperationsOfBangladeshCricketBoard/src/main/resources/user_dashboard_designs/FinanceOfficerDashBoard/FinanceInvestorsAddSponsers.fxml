@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.FinanceOfficer.FinanceInvestorsAddSponsersController">
    <children>
       <Label layoutX="32.0" layoutY="87.0" text="Sponser Name:">
@@ -16,7 +15,7 @@
             <Font name="Candara" size="21.0" />
          </font>
       </Label>
-      <TextField layoutX="219.0" layoutY="86.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <TextField fx:id="nameTextField" layoutX="219.0" layoutY="86.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
       <Label layoutX="32.0" layoutY="128.0" text="Sponser Company:">
          <font>
             <Font name="Candara" size="21.0" />
@@ -37,11 +36,11 @@
             <Font name="Candara" size="21.0" />
          </font>
       </Label>
-      <TextField layoutX="219.0" layoutY="127.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
-      <TextField layoutX="219.0" layoutY="171.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
-      <DatePicker layoutX="219.0" layoutY="217.0" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0; -fx-cursor: hand;" />
-      <DatePicker layoutX="216.0" layoutY="262.0" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0; -fx-cursor: hand;" />
-      <Button layoutX="167.0" layoutY="314.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="23.0" prefWidth="73.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Save" textFill="WHITE">
+      <TextField fx:id="companyTextField" layoutX="219.0" layoutY="127.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <TextField fx:id="ammountTextField" layoutX="219.0" layoutY="171.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <DatePicker fx:id="startingDatePicker" layoutX="219.0" layoutY="217.0" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0; -fx-cursor: hand;" />
+      <DatePicker fx:id="endDatePicker" layoutX="216.0" layoutY="262.0" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0; -fx-cursor: hand;" />
+      <Button layoutX="167.0" layoutY="314.0" mnemonicParsing="false" onAction="#saveOnActionButton" prefHeight="23.0" prefWidth="73.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #004D40; -fx-cursor: hand;" text="Save" textFill="WHITE">
          <font>
             <Font name="Candara" size="17.0" />
          </font>
@@ -51,8 +50,13 @@
             <Font name="Candara" size="21.0" />
          </font>
       </Label>
-      <ComboBox layoutX="299.0" layoutY="40.0" prefHeight="28.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
-      <Button layoutX="99.0" layoutY="369.0" mnemonicParsing="false" onAction="#inventoryLoadOnActionButton" prefHeight="33.0" prefWidth="218.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #800000; -fx-cursor: hand;" text="Send to Bord President" textFill="WHITE">
+      <ComboBox fx:id="selectIdComboBox" layoutX="299.0" layoutY="40.0" prefHeight="28.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-border-color: #004D40; -fx-border-width: 0 0 2px 0;" />
+      <Button layoutX="95.0" layoutY="409.0" mnemonicParsing="false" onAction="#sendToOnActionButton" prefHeight="33.0" prefWidth="218.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #800000; -fx-cursor: hand;" text="Send to Bord President" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="160.0" layoutY="360.0" mnemonicParsing="false" onAction="#updateOnActionButton" prefHeight="33.0" prefWidth="86.0" style="-fx-border-radius: 10px; -fx-background-radius: 20px; -fx-background-color: #1A237E; -fx-cursor: hand;" text="Update" textFill="WHITE">
          <font>
             <Font name="Candara" size="17.0" />
          </font>

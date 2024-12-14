@@ -68,12 +68,12 @@ public class LogisticInventoryShowAllItemsController {
     }
 
     @FXML
-    void inventoryLoadOnActionButton(ActionEvent event) {
+    void inventoryLoadOnAction(ActionEvent event) {
         String search = searchTextField.getText().toLowerCase();
         if (search.isEmpty()) {
             showAllItemsTableView.getItems().clear();
             //getClass().getResource(filePath).getFile()))
-            showAllItemsTableView.getItems().addAll(textFileLoader("src\\main\\resources\\AllTextData\\Inventory.txt"));
+            showAllItemsTableView.getItems().addAll(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\Inventory.txt"));
             return;
         }
 
