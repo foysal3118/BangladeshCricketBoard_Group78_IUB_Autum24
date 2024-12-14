@@ -183,4 +183,9 @@ public class MotherOfAllClasses {
             return Integer.parseInt(id) + 1;
         }
     }
+    public static void clearFileContent(String filePath) throws IOException {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            writer.write("");
+        }
+    }
 }
