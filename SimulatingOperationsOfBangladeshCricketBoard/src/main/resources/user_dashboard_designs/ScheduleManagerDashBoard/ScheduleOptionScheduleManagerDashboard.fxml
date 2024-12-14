@@ -13,7 +13,7 @@
    <right>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane layoutX="18.0" layoutY="87.0" onMouseClicked="#BookASlotOnMouseClick" prefHeight="101.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="18.0" layoutY="33.0" onMouseClicked="#BookASlotOnMouseClick" prefHeight="101.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -34,7 +34,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="18.0" layoutY="221.0" onMouseClicked="#ScheduledMatchListOnMouseClick" prefHeight="101.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="18.0" layoutY="171.0" onMouseClicked="#ScheduledMatchListOnMouseClick" prefHeight="101.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -55,7 +55,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="18.0" layoutY="369.0" onMouseClicked="#AppointmentOnMouseClick" prefHeight="101.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+            <AnchorPane layoutX="18.0" layoutY="301.0" onMouseClicked="#AppointmentOnMouseClick" prefHeight="101.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
                <effect>
                   <DropShadow>
                      <color>
@@ -69,7 +69,28 @@
                         <Image url="@imageUsedForfxml/calendar%20(1).png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="31.0" layoutY="52.0" prefHeight="46.0" prefWidth="104.0" text="Appointment" textAlignment="CENTER" wrapText="true">
+                  <Label layoutX="31.0" layoutY="56.0" prefHeight="41.0" prefWidth="104.0" text="Appointment Details" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="18.0" layoutY="422.0" onMouseClicked="#CreateNewAppointmentOnMouseClick" prefHeight="101.0" prefWidth="165.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-cursor: hand;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color green="0.3019607961177826" blue="0.250980406999588" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="64.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imageUsedForfxml/calendar%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="31.0" layoutY="56.0" prefHeight="41.0" prefWidth="104.0" text="Create New Appointment" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>

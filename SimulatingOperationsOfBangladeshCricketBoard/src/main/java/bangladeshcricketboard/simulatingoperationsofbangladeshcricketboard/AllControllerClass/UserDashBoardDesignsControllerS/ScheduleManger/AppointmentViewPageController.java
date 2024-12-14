@@ -25,9 +25,4 @@ public class AppointmentViewPageController
     @javafx.fxml.FXML
     public void CancelAppointmentButtonOnAction(ActionEvent actionEvent) {
     }
-
-    @javafx.fxml.FXML
-    public void RequestForAppointmentButtonOnAction(ActionEvent actionEvent) {
-        MotherOfAllClasses.borderPaneCenterChange(ScheduleOptionDashBoardBorderPane,"/user_dashboard_designs/ScheduleManagerDashBoard/NewAppointmentViewPage.fxml");
-    }
 }

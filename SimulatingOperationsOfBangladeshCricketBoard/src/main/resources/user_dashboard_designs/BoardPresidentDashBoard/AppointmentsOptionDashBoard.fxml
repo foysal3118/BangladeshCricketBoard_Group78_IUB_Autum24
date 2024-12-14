@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -34,7 +33,7 @@
                         </DropShadow>
                      </effect>
                   </Button>
-                  <Button layoutX="231.0" layoutY="435.0" mnemonicParsing="false" onAction="#RequestForAppointmentButtonOnAction" prefHeight="30.0" prefWidth="193.0" style="-fx-background-color: #004D40; -fx-cursor: hand;" text="Approve Appointment" textAlignment="CENTER" textFill="WHITE">
+                  <Button layoutX="231.0" layoutY="435.0" mnemonicParsing="false" onAction="#ApproveAppointmentButtonOnAction" prefHeight="30.0" prefWidth="193.0" style="-fx-background-color: #004D40; -fx-cursor: hand;" text="Approve Appointment" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
@@ -47,15 +46,15 @@
                      </effect>
                   </Button>
                   <Line endX="243.0" layoutX="194.0" layoutY="345.0" startX="-183.0" />
-                  <TableView layoutX="11.0" layoutY="19.0" prefHeight="233.0" prefWidth="427.0">
+                  <TableView fx:id="AppointmentDetailsTableView" layoutX="11.0" layoutY="19.0" prefHeight="233.0" prefWidth="427.0">
                      <columns>
-                        <TableColumn prefWidth="97.0" text="Appointment ID" />
-                        <TableColumn prefWidth="83.0" text="Date" />
-                        <TableColumn prefWidth="87.0" text="Time" />
-                        <TableColumn prefWidth="159.0" text="Person Name" />
+                        <TableColumn fx:id="AppointmentIDCol" prefWidth="97.0" text="Appointment ID" />
+                        <TableColumn fx:id="DateCol" prefWidth="83.0" text="Date" />
+                        <TableColumn fx:id="TimeCol" prefWidth="87.0" text="Time" />
+                        <TableColumn fx:id="NameCol" prefWidth="159.0" text="Person Name" />
                      </columns>
                   </TableView>
-                  <Button layoutX="180.0" layoutY="261.0" mnemonicParsing="false" onAction="#LoadAllAppointmentDetailsButtonOnAction" prefHeight="30.0" prefWidth="253.0" style="-fx-background-color: #004D40; -fx-cursor: hand;" text="Load New Appointments" textFill="WHITE">
+                  <Button layoutX="16.0" layoutY="261.0" mnemonicParsing="false" onAction="#LoadNewAppointmentsButtonOnAction" prefHeight="30.0" prefWidth="417.0" style="-fx-background-color: #004D40; -fx-cursor: hand;" text="Load New Appointments" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
@@ -77,13 +76,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Label>
-                  <ComboBox fx:id="DateFilterComboBox" layoutX="24.0" layoutY="288.0" prefHeight="25.0" prefWidth="126.0" />
-                  <Label layoutX="24.0" layoutY="261.0" text="Filter by Date:">
-                     <font>
-                        <Font name="Arial Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Button layoutX="180.0" layoutY="297.0" mnemonicParsing="false" onAction="#LoadAllAppointmentDetailsButtonOnAction" prefHeight="30.0" prefWidth="253.0" style="-fx-background-color: #004D40; -fx-cursor: hand;" text="Load Approved Appointments" textFill="WHITE">
+                  <Button layoutX="19.0" layoutY="297.0" mnemonicParsing="false" onAction="#LoadApprovedAppointmentsButtonOnAction" prefHeight="30.0" prefWidth="414.0" style="-fx-background-color: #004D40; -fx-cursor: hand;" text="Load Approved Appointments" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>

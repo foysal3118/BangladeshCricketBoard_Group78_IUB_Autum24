@@ -28,4 +28,9 @@ public class ScheduleOptionScheduleManagerDashboardController
     public void AppointmentOnMouseClick(Event event) {
         MotherOfAllClasses.borderPaneCenterChange(ScheduleOptionDashBoardBorderPane, "/user_dashboard_designs/ScheduleManagerDashBoard/AppointmentViewPage.fxml");
     }
+
+    @javafx.fxml.FXML
+    public void CreateNewAppointmentOnMouseClick(Event event) {
+        MotherOfAllClasses.borderPaneCenterChange(ScheduleOptionDashBoardBorderPane,"/user_dashboard_designs/ScheduleManagerDashBoard/NewAppointmentViewPage.fxml");
+    }
 }
