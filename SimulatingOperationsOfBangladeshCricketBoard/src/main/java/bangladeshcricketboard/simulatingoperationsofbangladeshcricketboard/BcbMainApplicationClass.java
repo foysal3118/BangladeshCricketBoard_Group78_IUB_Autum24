@@ -16,7 +16,7 @@ public class BcbMainApplicationClass extends Application {
     public void start(Stage stage) throws IOException {
 
         stage.setResizable(false);                                       
-        stage.initStyle(StageStyle.UNDECORATED);
+        stage.initStyle(StageStyle.UNDECORATED);                                    //"/user_dashboard_designs/FinanceOfficerDashBoard/FinanceOfficerDashbordDesign.fxml"
                                                                                              //"/user_dashboard_designs/ScheduleManagerDashBoard/ScheduleManagerDashBoardDesign.fxml"
                                                                                             //"/user_dashboard_designs/BoardPresidentDashBoard/BoardPresidentDashBoardDesigns.fxml"
         FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource("/user_dashboard_designs/FinanceOfficerDashBoard/FinanceOfficerDashbordDesign.fxml"));
