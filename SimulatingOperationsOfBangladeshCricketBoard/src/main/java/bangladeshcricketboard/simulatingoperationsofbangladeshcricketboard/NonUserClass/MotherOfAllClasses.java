@@ -1,9 +1,8 @@
 package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
+import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.Inventory;
 import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.BcbMainApplicationClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -164,5 +163,24 @@ public class MotherOfAllClasses {
         alert.setTitle("New File Recived");
         alert.setHeaderText("A new file has been recived");
         alert.showAndWait();
+    }
+
+    // Must add Id on the first
+    public static int getLastID(int baseId, String filePath) {
+        String id = "";
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                String[] data = line.split(",");
+                id = data[0];
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (id.equals("")) {
+            return baseId + 1;
+        } else {
+            return Integer.parseInt(id) + 1;
+        }
     }
 }

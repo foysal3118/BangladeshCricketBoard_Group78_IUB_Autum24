@@ -12,7 +12,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 import javafx.collections.FXCollections;
-
 public class LogisticInventoryShowAllItemsController {
 
     @FXML
@@ -39,10 +38,8 @@ public class LogisticInventoryShowAllItemsController {
         itemQuantityTableView.setCellValueFactory(new PropertyValueFactory<Inventory, Integer>("quantity"));
         addedDateTableColume.setCellValueFactory(new PropertyValueFactory<Inventory, String>("addDate"));
         descriptionTableColume.setCellValueFactory(new PropertyValueFactory<Inventory, String>("description"));
-
-        showAllItemsTableView.getItems().addAll(textFileLoader("inventory.txt"));
+        showAllItemsTableView.getItems().addAll(textFileLoader("src\\main\\resources\\AllTextData\\Inventory.txt"));
     }
-
     public ObservableList<Inventory> textFileLoader(String filePath) {
         ObservableList<Inventory> list = FXCollections.observableArrayList();
         try {
@@ -65,12 +62,13 @@ public class LogisticInventoryShowAllItemsController {
         String search = searchTextField.getText().toLowerCase();
         if (search.isEmpty()) {
             showAllItemsTableView.getItems().clear();
-            showAllItemsTableView.getItems().addAll(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\Inventory.txt"));
+            //getClass().getResource(filePath).getFile()))
+            showAllItemsTableView.getItems().addAll(textFileLoader("src\\main\\resources\\AllTextData\\Inventory.txt"));
             return;
         }
 
         ObservableList<Inventory> list = FXCollections.observableArrayList();
-        for (Inventory inventory : textFileLoader("inventory.txt")) {
+        for (Inventory inventory : textFileLoader("src\\main\\resources\\AllTextData\\Inventory.txt")) {
             if (inventory.getItemName().toLowerCase().contains(search) || inventory.getAddDate().toLowerCase().contains(search) || inventory.getDescription().toLowerCase().contains(search)) {
                 list.add(inventory);
             }

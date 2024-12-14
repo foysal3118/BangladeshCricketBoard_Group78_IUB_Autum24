@@ -5,9 +5,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="543.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.ScheduleManger.NewAppointmentViewPageController">
    <children>
@@ -31,7 +32,7 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </Label>
-      <DatePicker fx:id="ApoointmentDatePciket" layoutX="176.0" layoutY="204.0" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #004D40;" />
+      <DatePicker fx:id="ApoointmentDatePicker" layoutX="176.0" layoutY="204.0" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #004D40;" />
       <Label layoutX="107.0" layoutY="208.0" text="Date:">
          <font>
             <Font name="Arial Bold" size="15.0" />
@@ -63,10 +64,17 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </Label>
-      <Button layoutX="124.0" layoutY="479.0" mnemonicParsing="false" onAction="#RequestForAppointmentButtonOnAction" prefHeight="33.0" prefWidth="208.0" style="-fx-background-color: #004D40;" text="Request for Appointment" textFill="WHITE">
+      <Button layoutX="124.0" layoutY="479.0" mnemonicParsing="false" onAction="#RequestForAppointmentButtonOnAction" prefHeight="33.0" prefWidth="208.0" style="-fx-background-color: #004D40; -fx-cursor: hand;" text="Request for Appointment" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.7938931584358215" />
+               </color>
+            </DropShadow>
+         </effect>
       </Button>
    </children>
 </AnchorPane>

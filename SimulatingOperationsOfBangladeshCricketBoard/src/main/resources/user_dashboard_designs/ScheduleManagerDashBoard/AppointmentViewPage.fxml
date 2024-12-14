@@ -14,19 +14,7 @@
 
 <AnchorPane prefHeight="543.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.ScheduleManger.AppointmentViewPageController">
    <children>
-      <Button layoutX="208.0" layoutY="385.0" mnemonicParsing="false" onAction="#CancelAppointmentButtonOnAction" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: EF5350; -fx-cursor: hand;" text="Cancel Appointment" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="16.0" />
-         </font>
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color opacity="0.699999988079071" />
-               </color>
-            </DropShadow>
-         </effect>
-      </Button>
-      <Button layoutX="207.0" layoutY="429.0" mnemonicParsing="false" onAction="#RequestForAppointmentButtonOnAction" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #004D40; -fx-cursor: hand;" text="Request for Appointment" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="256.0" layoutY="370.0" mnemonicParsing="false" onAction="#CancelAppointmentButtonOnAction" prefHeight="30.0" prefWidth="182.0" style="-fx-background-color: EF5350; -fx-cursor: hand;" text="Cancel Appointment" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
