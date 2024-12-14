@@ -1,17 +1,16 @@
 package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.collections.ObservableList;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-
-import javafx.collections.FXCollections;
 
 public class LogisticInventoryShowAllItemsController {
 
@@ -40,7 +39,7 @@ public class LogisticInventoryShowAllItemsController {
         addedDateTableColume.setCellValueFactory(new PropertyValueFactory<Inventory, String>("addDate"));
         descriptionTableColume.setCellValueFactory(new PropertyValueFactory<Inventory, String>("description"));
 
-        showAllItemsTableView.getItems().addAll(textFileLoader("inventory.txt"));
+        showAllItemsTableView.getItems().addAll(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\Inventory.txt"));
     }
 
     public ObservableList<Inventory> textFileLoader(String filePath) {
@@ -69,8 +68,8 @@ public class LogisticInventoryShowAllItemsController {
             return;
         }
 
-        ObservableList<Inventory> list = FXCollections.observableArrayList();
-        for (Inventory inventory : textFileLoader("inventory.txt")) {
+        ObservableList<Inventory> list = FXCollections.observableArrayList();  //BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\Inventory.txt")
+        for (Inventory inventory : textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\Inventory.txt")) {
             if (inventory.getItemName().toLowerCase().contains(search) || inventory.getAddDate().toLowerCase().contains(search) || inventory.getDescription().toLowerCase().contains(search)) {
                 list.add(inventory);
             }
