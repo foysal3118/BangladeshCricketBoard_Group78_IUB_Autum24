@@ -77,7 +77,7 @@ public class FinanceOfficerDashbordDesignController {
         MotherOfAllClasses.mouseEnterEffectMinimizeButton(WindowMinimizeButton);
         MotherOfAllClasses.mouseEnterEffectExitButton(WindowCloseButton);
         MotherOfAllClasses.addHoverEffect(accountSettingsSideBar, financeSideBar, homeSideBar, informationSideBar, investorSideBar, logOutSideBar, payrollSideBar);
-
+        MotherOfAllClasses.borderPaneCenterChange(FinanceOfficerDashbordBorderpane, "/user_dashboard_designs/FinanceOfficerDashBoard/FinanceOfficerHomePage.fxml");
         collapseSideBar();
 
         leftSideBar.setOnMouseEntered(event -> {
