@@ -1,6 +1,11 @@
 package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.BcbMainApplicationClass;
 import javafx.event.ActionEvent;
@@ -9,6 +14,8 @@ import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -16,6 +23,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class MotherOfAllClasses {
@@ -24,6 +32,17 @@ public class MotherOfAllClasses {
     private static double yOffSet = 0;
 
     public static void sceneSwithcer(MouseEvent event, String fxmlPath){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource(fxmlPath));
+            Parent root = fxmlLoader.load();
+            Scene scene = new Scene(root);
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            setStageAndSetupDrag(stage, root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {}
+
+    }public static void sceneSwithcer(ActionEvent event, String fxmlPath){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(BcbMainApplicationClass.class.getResource(fxmlPath));
             Parent root = fxmlLoader.load();
@@ -186,5 +205,30 @@ public class MotherOfAllClasses {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             writer.write("");
         }
+    }
+
+    public static File fileChooser(ActionEvent event, Button fileChooserButton) {
+        FileChooser file = new FileChooser();
+        file.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
+        Stage stage = (Stage) fileChooserButton.getScene().getWindow();
+        return file.showOpenDialog(stage);
+    }
+
+    public static void setBarChart(BarChart<String, Number> barChart, String filePath) {
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        series.setName("Cost Report");
+
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                String[] data = line.split(",");
+                series.getData().add(new XYChart.Data<>(data[0], Double.parseDouble(data[2])));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        barChart.getData().clear();
+        barChart.getData().add(series);
     }
 }

@@ -3,7 +3,6 @@
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -40,12 +39,7 @@
                </font>
             </Label>
             <Line endX="53.33332824707031" layoutX="151.0" layoutY="55.0" startX="-100.0" />
-            <Button layoutX="95.0" layoutY="199.0" mnemonicParsing="false" onAction="#matchViewMoreOnActionButton" style="-fx-background-radius: 20px; -fx-background-color: #455A64; -fx-cursor: hand;" text="View More" textFill="WHITE">
-               <font>
-                  <Font name="Arial" size="12.0" />
-               </font>
-            </Button>
-            <TableView fx:id="matchDateTableView" editable="true" fixedCellSize="1.0" layoutX="18.0" layoutY="94.0" prefHeight="89.0" prefWidth="222.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+            <TableView fx:id="matchDateTableView" editable="true" fixedCellSize="1.0" layoutX="18.0" layoutY="94.0" prefHeight="126.0" prefWidth="222.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
                <columns>
                   <TableColumn fx:id="matchDateMatchColume" prefWidth="93.33338165283203" text="Match" />
                   <TableColumn fx:id="matchDateColume" prefWidth="127.33326721191406" text="Match Date" />
@@ -76,7 +70,7 @@
                </font>
             </Label>
             <Line endX="88.66668701171875" layoutX="204.0" layoutY="57.0" startX="-100.0" />
-            <TableView fx:id="requestStatusTableView" editable="true" fixedCellSize="1.0" layoutX="14.0" layoutY="91.0" prefHeight="98.0" prefWidth="381.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+            <TableView fx:id="requestStatusTableView" editable="true" fixedCellSize="1.0" layoutX="14.0" layoutY="91.0" prefHeight="126.0" prefWidth="382.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
                <columns>
                   <TableColumn fx:id="requestIdColume" onEditStart="#requestIdColume" prefWidth="235.33334350585938" text="Request ID" />
                   <TableColumn fx:id="statuscolume" prefWidth="118.66668701171875" text="Status" />
@@ -85,11 +79,6 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <Button layoutX="168.0" layoutY="198.0" mnemonicParsing="false" onAction="#requestViewMoreOnActionButton" style="-fx-background-radius: 20px; -fx-background-color: #455A64; -fx-cursor: hand;" text="View More" textFill="WHITE">
-               <font>
-                  <Font name="Arial" size="12.0" />
-               </font>
-            </Button>
             <Label layoutX="14.0" layoutY="66.0" text="Latest Request" underline="true">
                <font>
                   <Font name="Candara" size="15.0" />
@@ -104,7 +93,7 @@
             </DropShadow>
          </effect>
       </AnchorPane>
-      <BarChart fx:id="MonthlyBudgetBarChart" layoutX="71.0" layoutY="320.0" prefHeight="204.0" prefWidth="419.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-background-radius: 10px;" title="Monthly Budgets">
+      <BarChart fx:id="MonthlyBudgetBarChart" layoutX="71.0" layoutY="320.0" prefHeight="204.0" prefWidth="690.0" style="-fx-background-color: white; -fx-border-color: #004D40; -fx-border-radius: 10px; -fx-background-radius: 10px;" title="Monthly Budgets">
          <xAxis>
             <CategoryAxis label="Month" prefHeight="24.0" prefWidth="342.0" side="BOTTOM" />
          </xAxis>
@@ -119,57 +108,5 @@
             </DropShadow>
          </effect>
       </BarChart>
-      <AnchorPane layoutX="510.0" layoutY="320.0" onMouseClicked="#inventoryItemsOnMouseClick" prefHeight="91.0" prefWidth="246.0" style="-fx-border-color: #004D40; -fx-border-radius: 10px; -fx-background-color: white; -fx-background-radius: 10px;">
-         <children>
-            <ImageView fitHeight="48.0" fitWidth="42.0" layoutX="14.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@LogisticManagerDashboard_images/inventory.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="61.0" layoutY="32.0" prefHeight="21.0" prefWidth="134.0" text="Inventory Items">
-               <font>
-                  <Font name="Candara" size="20.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="36.0" fitWidth="29.0" layoutX="203.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@LogisticManagerDashboard_images/next.png" />
-               </image>
-            </ImageView>
-         </children>
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color green="0.3019607961177826" blue="0.250980406999588" />
-               </color>
-            </DropShadow>
-         </effect>
-      </AnchorPane>
-      <AnchorPane layoutX="510.0" layoutY="432.0" onMouseClicked="#latestFeedbackOnMouseClick" prefHeight="91.0" prefWidth="246.0" style="-fx-border-color: #004D40; -fx-border-radius: 10px; -fx-background-color: white; -fx-background-radius: 10px;">
-         <children>
-            <ImageView fitHeight="48.0" fitWidth="42.0" layoutX="14.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@LogisticManagerDashboard_images/write-feedback.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="63.0" layoutY="32.0" prefHeight="25.0" prefWidth="141.0" text="Latest Feedback">
-               <font>
-                  <Font name="Candara" size="20.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="36.0" fitWidth="29.0" layoutX="205.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@LogisticManagerDashboard_images/next.png" />
-               </image>
-            </ImageView>
-         </children>
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color green="0.3019607961177826" blue="0.250980406999588" />
-               </color>
-            </DropShadow>
-         </effect>
-      </AnchorPane>
    </children>
 </AnchorPane>

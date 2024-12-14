@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.time.LocalDate;
 
+import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass.MotherOfAllClasses;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -57,24 +58,27 @@ public class LogisticInventoryItemListController {
             return;
         }
 
+        int id = MotherOfAllClasses.getLastID(500, "BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\ItemsListSendToPC.txt");
+        
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Item List");
+        alert.setHeaderText("Item List Created Successfully");
+        alert.setContentText("ID: " + id + "\nItem Name: " + itemNameTextField.getText() + "\nQuantity: " + quantityTextField.getText() + "\nPriority: " + priorityComboBox.getValue() + "\nDelivery Date: " + deliveryDatePicker.getValue() + "\nDescription: " + descriptionTexField.getText());
+        alert.showAndWait();    
+        
+        
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\ItemsListSendToPC.txt", true));
+            writer.write(id + "," + itemNameTextField.getText() + "," + quantityTextField.getText() + "," + priorityComboBox.getValue() + "," + deliveryDatePicker.getValue() + "," + descriptionTexField.getText());
+            writer.close();
+        } catch (Exception e) {}
+
+
         itemNameTextField.clear();
         quantityTextField.clear();
         descriptionTexField.clear();
         priorityComboBox.setValue(null);
         deliveryDatePicker.setValue(null);
-
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Item List");
-        alert.setHeaderText("Item List Created Successfully");
-        alert.setContentText("Item Name: " + itemNameTextField.getText() + "\nQuantity: " + quantityTextField.getText() + "\nPriority: " + priorityComboBox.getValue() + "\nDelivery Date: " + deliveryDatePicker.getValue() + "\nDescription: " + descriptionTexField.getText());
-        alert.showAndWait();    
-
-
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\ItemsList.txt", true));
-            writer.write(itemNameTextField.getText() + "," + quantityTextField.getText() + "," + priorityComboBox.getValue() + "," + deliveryDatePicker.getValue() + "," + descriptionTexField.getText());
-            writer.close();
-        } catch (Exception e) {}
     }
 
     @FXML

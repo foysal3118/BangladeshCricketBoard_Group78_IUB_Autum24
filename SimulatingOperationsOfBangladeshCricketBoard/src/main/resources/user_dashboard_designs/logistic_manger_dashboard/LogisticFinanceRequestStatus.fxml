@@ -7,17 +7,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogisticFinanceRequestStatusController">
    <children>
-      <TableView layoutX="26.0" layoutY="145.0" prefHeight="310.0" prefWidth="395.0" style="-fx-background-color: white;">
+      <TableView fx:id="requestTableView" layoutX="26.0" layoutY="107.0" prefHeight="375.0" prefWidth="395.0" style="-fx-background-color: white;">
         <columns>
-          <TableColumn prefWidth="75.0" text="Request ID" />
-            <TableColumn prefWidth="212.66671752929688" text="Description" />
-            <TableColumn prefWidth="105.99993896484375" text="Status" />
+          <TableColumn fx:id="requestIdTableColume" prefWidth="75.0" text="Request ID" />
+            <TableColumn fx:id="descriptionTableColume" prefWidth="212.66671752929688" text="Description" />
+            <TableColumn fx:id="StatusTableColume" prefWidth="105.99993896484375" text="Status" />
         </columns>
       </TableView>
-      <TextField layoutX="26.0" layoutY="104.0" promptText="Search" style="-fx-background-radius: 10px;" />
-      <Button layoutX="205.0" layoutY="104.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="55.0" style="-fx-background-color: #004D40; -fx-background-radius: 20px;" text="Load" textFill="WHITE">
+      <TextField fx:id="searchTextField" layoutX="26.0" layoutY="66.0" promptText="Search" style="-fx-background-radius: 10px;" />
+      <Button layoutX="205.0" layoutY="66.0" mnemonicParsing="false" onAction="#loadSearchOnActionButton" prefHeight="24.0" prefWidth="55.0" style="-fx-background-color: #004D40; -fx-background-radius: 20px;" text="Load" textFill="WHITE">
          <font>
             <Font name="Candara" size="12.0" />
          </font>

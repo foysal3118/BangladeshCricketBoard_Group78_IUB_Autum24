@@ -14,7 +14,7 @@
          </font>
       </Label>
       <TextArea fx:id="descriptionTextArea" layoutX="27.0" layoutY="82.0" prefHeight="140.0" prefWidth="350.0" />
-      <Button layoutX="27.0" layoutY="242.0" mnemonicParsing="false" onAction="#choosefile" style="-fx-background-color: #004D40; -fx-background-radius: 20px;" text="Choose File" textFill="WHITE" />
+      <Button fx:id="chooseFile" layoutX="27.0" layoutY="242.0" mnemonicParsing="false" onAction="#choosefile" style="-fx-background-color: #004D40; -fx-background-radius: 20px;" text="Choose File" textFill="WHITE" />
       <Label fx:id="fileLabel" layoutX="119.0" layoutY="244.0" text="File.text*">
          <font>
             <Font name="Candara" size="18.0" />

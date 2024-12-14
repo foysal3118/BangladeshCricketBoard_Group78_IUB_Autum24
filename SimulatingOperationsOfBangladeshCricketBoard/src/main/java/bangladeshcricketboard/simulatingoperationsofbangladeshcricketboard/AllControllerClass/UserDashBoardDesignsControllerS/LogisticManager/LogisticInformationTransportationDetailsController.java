@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.time.LocalDate;
 
+import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass.MotherOfAllClasses;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -75,16 +76,17 @@ public class LogisticInformationTransportationDetailsController {
         }
         
         String coachType = ((RadioButton) radio.getSelectedToggle()).getText();
+        int id = MotherOfAllClasses.getLastID(900, "BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\TransportationDetailsSendToTM.txt");
         
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Transportation Details");
         alert.setHeaderText("Transportation Details Saved Successfully");
-        alert.setContentText("Coach No: " + coachNoTextfield.getText() + "\nCoach Type: " + coachType + "\nDeparture Date: " + departureDatePicker.getValue() + "\nDeparture Time: " + departureTimeTextfield.getText() + "\nLocation: " + locationTextField.getText() + "\nStadium: " + stadiumTextfield.getText());
+        alert.setContentText("ID: " + id + "\nCoach No: " + coachNoTextfield.getText() + "\nCoach Type: " + coachType + "\nDeparture Date: " + departureDatePicker.getValue() + "\nDeparture Time: " + departureTimeTextfield.getText() + "\nLocation: " + locationTextField.getText() + "\nStadium: " + stadiumTextfield.getText());
         alert.showAndWait();
 
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\TransportationDetails.txt", true));
-            writer.write(coachNoTextfield.getText() + "," + coachType + "," + departureDatePicker.getValue() + "," + departureTimeTextfield.getText() + "," + locationTextField.getText() + "," + stadiumTextfield.getText());
+            BufferedWriter writer = new BufferedWriter(new FileWriter("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\TransportationDetailsSendToTM.txt", true));
+            writer.write(id + "," + coachNoTextfield.getText() + "," + coachType + "," + departureDatePicker.getValue() + "," + departureTimeTextfield.getText() + "," + locationTextField.getText() + "," + stadiumTextfield.getText());
             writer.close();
         } catch (Exception e) {
         }

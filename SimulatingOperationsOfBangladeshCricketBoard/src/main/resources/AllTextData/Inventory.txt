@@ -1,6 +1,1 @@
-asdasd,123,2024-12-14,sdfadf
-bat,211,2024-12-14,qwer
-ball,332,2024-12-14,fsdfd
-bat,21,2024-12-14,dhjdsds
-ribne,3647,2024-12-14,dfsfd
-sfdsgf,123,2024-12-14,sadasd
+Bat ,200,2024-12-14,need

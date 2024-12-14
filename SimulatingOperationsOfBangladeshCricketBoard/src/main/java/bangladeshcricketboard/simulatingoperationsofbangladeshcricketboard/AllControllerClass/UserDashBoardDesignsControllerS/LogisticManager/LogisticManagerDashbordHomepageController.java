@@ -1,16 +1,21 @@
 package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager;
 
-import javafx.event.ActionEvent;
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass.MotherOfAllClasses;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.chart.BarChart;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.input.MouseEvent;
 
 public class LogisticManagerDashbordHomepageController {
 
     @FXML
-    private BarChart<?, ?> MonthlyBudgetBarChart;
+    private BarChart<String, Number> MonthlyBudgetBarChart;
 
     @FXML
     private TableColumn<?, ?> matchDateColume;
@@ -22,37 +27,43 @@ public class LogisticManagerDashbordHomepageController {
     private TableView<?> matchDateTableView;
 
     @FXML
-    private TableColumn<?, ?> requestIdColume;
+    private TableColumn<ObservableList<String>, String> requestIdColume;
 
     @FXML
-    private TableView<?> requestStatusTableView;
+    private TableView<ObservableList<String>> requestStatusTableView;
 
     @FXML
-    private TableColumn<?, ?> statuscolume;
+    private TableColumn<ObservableList<String>, String> statuscolume;
 
     @FXML
-    void inventoryItemsOnMouseClick(MouseEvent event) {
-        
+    public void initialize() {
+        requestIdColume.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().get(0))); 
+        statuscolume.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().get(2)));
+
+        requestStatusTableView.setItems(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\RequestStatus.txt"));
+
+        MotherOfAllClasses.setBarChart(MonthlyBudgetBarChart, "BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\CostReportChart.txt");
     }
 
     @FXML
-    void latestFeedbackOnMouseClick(MouseEvent event) {
-
+    public void requestIdColume(Event event) {
     }
 
-    @FXML
-    void matchViewMoreOnActionButton(ActionEvent event) {
-
-    }
-
-    @FXML
-    void requestIdColume(ActionEvent event) {
-
-    }
-
-    @FXML
-    void requestViewMoreOnActionButton(ActionEvent event) {
-
+    public ObservableList<ObservableList<String>> textFileLoader(String filePath) {
+        ObservableList<ObservableList<String>> list = FXCollections.observableArrayList();
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath));
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                String[] data = line.split(",");
+                ObservableList<String> row = FXCollections.observableArrayList(data);
+                list.add(row);
+            }
+            bufferedReader.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 
 }

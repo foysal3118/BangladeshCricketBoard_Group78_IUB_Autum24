@@ -2,6 +2,7 @@ package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllC
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.Comparator;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -34,6 +35,8 @@ public class FinanceInvestorViewDetailsController {
 
     @FXML
     public void initialize() {
+        filterComboBox.getItems().addAll("All", "Latest", "Oldest");
+
         sponserIdTableColume.setCellValueFactory(new PropertyValueFactory<SponserDetails, String>("Id"));
         sponserNameTableColume.setCellValueFactory(new PropertyValueFactory<SponserDetails, String>("Name"));
         sponserAmmountTableColume.setCellValueFactory(new PropertyValueFactory<SponserDetails, String>("Ammount"));
@@ -61,7 +64,17 @@ public class FinanceInvestorViewDetailsController {
 
     @FXML
     void loadFilterOnActionButton(ActionEvent event) {
-
+        ObservableList<SponserDetails> list = FXCollections.observableArrayList();
+        if (filterComboBox.getValue().equals("All")) {
+            list.addAll(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\SendToBPSponserDetails.txt"));
+        } else if (filterComboBox.getValue().equals("Latest")) {
+            list.addAll(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\SendToBPSponserDetails.txt"));
+            list.sort(Comparator.comparing(SponserDetails::getStartingDate).reversed());
+        } else if (filterComboBox.getValue().equals("Oldest")) {
+            list.addAll(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\SendToBPSponserDetails.txt"));
+            list.sort(Comparator.comparing(SponserDetails::getStartingDate));
+        }
+        sponserTableView.getItems().clear();
+        sponserTableView.getItems().addAll(list);
     }
-
 }

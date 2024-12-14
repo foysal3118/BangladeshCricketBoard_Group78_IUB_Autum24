@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogisticFinanceCostReportController">
    <children>
-      <BarChart layoutX="43.0" layoutY="46.0" prefHeight="178.0" prefWidth="360.0" style="-fx-background-color: transparent;" title="Monthly Budgets">
+      <BarChart fx:id="pieChart" layoutX="43.0" layoutY="46.0" prefHeight="178.0" prefWidth="360.0" style="-fx-background-color: transparent;" title="Monthly Budgets">
          <xAxis>
             <CategoryAxis label="Month" side="BOTTOM" />
          </xAxis>
@@ -24,14 +24,14 @@
             <Font name="Candara" size="18.0" />
          </font>
       </Label>
-      <TextArea layoutX="43.0" layoutY="264.0" prefHeight="145.0" prefWidth="380.0" />
-      <Button layoutX="43.0" layoutY="433.0" mnemonicParsing="false" style="-fx-background-color: #004D40; -fx-background-radius: 20px;" text="Choose a File" textFill="WHITE" />
-      <Label layoutX="135.0" layoutY="435.0" text="File.pdf*">
+      <TextArea fx:id="descriptionTextArea" layoutX="43.0" layoutY="264.0" prefHeight="145.0" prefWidth="380.0" />
+      <Button fx:id="chosefileID" layoutX="43.0" layoutY="433.0" mnemonicParsing="false" onAction="#chooseFileOnActionButton" style="-fx-background-color: #004D40; -fx-background-radius: 20px;" text="Choose a File" textFill="WHITE" />
+      <Label fx:id="filenameLabel" layoutX="135.0" layoutY="435.0" text="File.text">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Button layoutX="135.0" layoutY="476.0" mnemonicParsing="false" style="-fx-background-color: #800000; -fx-background-radius: 20px;" text="Send to Finance Officer" textFill="WHITE">
+      <Button layoutX="135.0" layoutY="476.0" mnemonicParsing="false" onAction="#SendToOnActionButton" style="-fx-background-color: #800000; -fx-background-radius: 20px;" text="Send to Finance Officer" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>

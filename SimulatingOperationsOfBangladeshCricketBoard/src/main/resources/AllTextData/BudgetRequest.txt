@@ -1,0 +1,62 @@
+807,asdad,            
+
+Shaown Vai-       5
+
+Sejan Vai-        14
+
+Shihab-           13
+
+Shanto-           11
+
+Fahim-             3
+
+
+Chicken- 1.4kg---270tk
+Egg    - 4pcs-----55tk
+Oil    - 2kg-----336tk
+Rice   - 4kg-----260tk
+Potato - 2kg-----150tk
+Onion  - 1kg-----140tk
+Garlic - 250g---- 60tk
+Sim    - 500g---- 60tk
+FulCopi- 1pcs---- 50tk
+Chicken- 1.3kg---250tk
+Chili  - 100g-----30tk
+Chicken- 1.2kg---240tk
+Polao  - 1kg-----160tk
+Begun  - 800g-----80tk
+Tok doi- 250g----120tk
+-----------------------
+Total           2261tk
+
+997,ASAP,            
+
+Shaown Vai-       5
+
+Sejan Vai-        14
+
+Shihab-           13
+
+Shanto-           11
+
+Fahim-             3
+
+
+Chicken- 1.4kg---270tk
+Egg    - 4pcs-----55tk
+Oil    - 2kg-----336tk
+Rice   - 4kg-----260tk
+Potato - 2kg-----150tk
+Onion  - 1kg-----140tk
+Garlic - 250g---- 60tk
+Sim    - 500g---- 60tk
+FulCopi- 1pcs---- 50tk
+Chicken- 1.3kg---250tk
+Chili  - 100g-----30tk
+Chicken- 1.2kg---240tk
+Polao  - 1kg-----160tk
+Begun  - 800g-----80tk
+Tok doi- 250g----120tk
+-----------------------
+Total           2261tk
+

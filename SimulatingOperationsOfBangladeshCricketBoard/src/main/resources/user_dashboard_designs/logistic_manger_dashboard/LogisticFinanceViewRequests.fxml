@@ -1,33 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="447.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager.LogicticFinanceViewRequestController">
    <children>
-      <TableView layoutX="43.0" layoutY="157.0" prefHeight="337.0" prefWidth="360.0" style="-fx-background-color: transparent;">
+      <TableView fx:id="viewRequestTableView" layoutX="43.0" layoutY="157.0" prefHeight="337.0" prefWidth="360.0" style="-fx-background-color: transparent;">
         <columns>
-          <TableColumn prefWidth="85.33334350585938" text="Request ID" />
-          <TableColumn prefWidth="273.33331298828125" text="Description" />
+          <TableColumn fx:id="requesIdTableColume" prefWidth="85.33334350585938" text="Request ID" />
+          <TableColumn fx:id="descriptionTableView" prefWidth="273.33331298828125" text="Description" />
         </columns>
       </TableView>
-      <TextField layoutX="43.0" layoutY="113.0" promptText="Search" style="-fx-background-radius: 10px;" />
-      <Label layoutX="268.0" layoutY="116.0" text="Filter">
-         <font>
-            <Font name="Candara" size="16.0" />
-         </font>
-      </Label>
-      <ComboBox layoutX="311.0" layoutY="113.0" prefHeight="25.0" prefWidth="74.0" />
-      <ImageView fitHeight="20.0" fitWidth="17.0" layoutX="165.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="searchTextField" layoutX="43.0" layoutY="113.0" promptText="Search" style="-fx-background-radius: 10px;" />
+      <ImageView fitHeight="20.0" fitWidth="17.0" layoutX="165.0" layoutY="117.0" onMouseClicked="#searchOnActionButton" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@magnifying-glass.png" />
+            <Image url="@LogisticManagerDashboard_images/magnifying-glass.png" />
          </image>
       </ImageView>
    </children>

@@ -1,48 +1,45 @@
 package bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.AllControllerClass.UserDashBoardDesignsControllerS.LogisticManager;
 
-import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass.MotherOfAllClasses;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.nio.file.Path;
-import java.time.LocalDateTime;
 import java.util.Random;
 
-public class LogisticFinanceBudgetRequestController {
+import bangladeshcricketboard.simulatingoperationsofbangladeshcricketboard.NonUserClass.MotherOfAllClasses;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.chart.BarChart;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+
+public class LogisticFinanceCostReportController {
+
+    @FXML
+    private Button chosefileID;
 
     @FXML
     private TextArea descriptionTextArea;
 
     @FXML
-    private Label fileNameLabel;
+    private Label filenameLabel;
 
     @FXML
-    private Button chooseFile;
-
-    @FXML
-    private Button sendRequest;
+    private BarChart<String, Number> pieChart;
 
     private File SelectedFile;
 
     @FXML
-    void chooseFileOnActionButton(ActionEvent event) {
-        SelectedFile = MotherOfAllClasses.fileChooser(event, chooseFile);
-        if (SelectedFile != null) {
-            fileNameLabel.setText(SelectedFile.getName());
-        }
+    public void initialize() {
+        MotherOfAllClasses.setBarChart(pieChart, "BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\CostReportChart.txt");
     }
 
     @FXML
-    void sendRequestOnActionButton(ActionEvent event) {
+    void SendToOnActionButton(ActionEvent event) {
         if (SelectedFile == null) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
@@ -74,19 +71,22 @@ public class LogisticFinanceBudgetRequestController {
             }
             reader.close();
 
-            Path dest = Path.of("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData", "BudgetRequest" + ".txt");
-            Path dest1 = Path.of("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData", "RequestStatus" + ".txt");
+            Random random1 = new Random();
+            int cost = random1.nextInt(1000);
+            Path dest = Path.of("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData", "CostReportToFC" + ".txt");
+            Path dest1 = Path.of("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData", "CostReportChart" + ".txt");
 
-            int id = MotherOfAllClasses.getLastID(0, "BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\RequestStatus.txt");
-            LocalDateTime now = LocalDateTime.now();
+            int id = MotherOfAllClasses.getLastID(600, "BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\BudgetRequestID.txt");
 
             BufferedWriter writer = new BufferedWriter(new FileWriter(dest.toFile(), true));
             BufferedWriter writer1 = new BufferedWriter(new FileWriter(dest1.toFile(), true));
-            writer1.write(String.valueOf(id) + "," + description + "," + "Pending" + "," + now.toString() + "\n");
+            writer1.write(id + "," + description + "," + cost + "\n");
             writer.write(requestId + "," + description + "," + content.toString());
             writer1.close();
             writer.close();
             SelectedFile = null;
+
+            initialize();
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Request Sent");
@@ -97,4 +97,11 @@ public class LogisticFinanceBudgetRequestController {
         } catch (Exception e) {}
     }
 
+    @FXML
+    void chooseFileOnActionButton(ActionEvent event) {
+        SelectedFile = MotherOfAllClasses.fileChooser(event, chosefileID);
+        if (SelectedFile != null) {
+            filenameLabel.setText(SelectedFile.getName());
+        }
+    }
 }

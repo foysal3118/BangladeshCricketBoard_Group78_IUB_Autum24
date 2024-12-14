@@ -11,30 +11,30 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
-public class LogisticInformationHistory {
+public class LogisticFinanceRequestStatusController {
 
     @FXML
-    private TableColumn<ObservableList<String>, String> dateTableView;
+    private TableColumn<ObservableList<String>, String> StatusTableColume;
 
     @FXML
-    private TableColumn<ObservableList<String>, String> descriptionTableView;
+    private TableColumn<ObservableList<String>, String> descriptionTableColume;
 
     @FXML
-    private TableView<ObservableList<String>> historyTableView;
+    private TableColumn<ObservableList<String>, String> requestIdTableColume;
 
     @FXML
-    private TableColumn<ObservableList<String>, String> idTableView;
+    private TableView<ObservableList<String>> requestTableView;
 
     @FXML
     private TextField searchTextField;
 
     @FXML
     public void initialize() {
-        idTableView.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().get(0)));
-        descriptionTableView.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().get(1))); 
-        dateTableView.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().get(2)));
+        requestIdTableColume.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().get(0)));
+        descriptionTableColume.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().get(1))); 
+        StatusTableColume.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().get(2)));
 
-        historyTableView.setItems(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\ManageVanue.txt"));
+        requestTableView.setItems(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\RequestStatus.txt"));
     }
 
     public ObservableList<ObservableList<String>> textFileLoader(String filePath) {
@@ -55,12 +55,12 @@ public class LogisticInformationHistory {
     }
 
     @FXML
-    void loadOnActionButton(ActionEvent event) {
+    void loadSearchOnActionButton(ActionEvent event) {
         String search = searchTextField.getText().toLowerCase();
         if (search.isEmpty()) {
-            historyTableView.getItems().clear();
+            requestTableView.getItems().clear();
             //getClass().getResource(filePath).getFile()))
-            historyTableView.getItems().addAll(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\RequestStatus.txt"));
+            requestTableView.getItems().addAll(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\RequestStatus.txt"));
             return;
         }
 
@@ -73,7 +73,8 @@ public class LogisticInformationHistory {
                 list.add(inventory);
             }
         }
-        historyTableView.getItems().clear();
-        historyTableView.getItems().addAll(list);
+        requestTableView.getItems().clear();
+        requestTableView.getItems().addAll(list);
     }
+
 }

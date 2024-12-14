@@ -12,13 +12,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import javafx.collections.ObservableList;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-
-import javafx.collections.FXCollections;
-
 public class LogisticInventoryShowAllItemsController {
 
     @FXML
@@ -45,11 +38,9 @@ public class LogisticInventoryShowAllItemsController {
         itemQuantityTableView.setCellValueFactory(new PropertyValueFactory<Inventory, Integer>("quantity"));
         addedDateTableColume.setCellValueFactory(new PropertyValueFactory<Inventory, String>("addDate"));
         descriptionTableColume.setCellValueFactory(new PropertyValueFactory<Inventory, String>("description"));
-//         showAllItemsTableView.getItems().addAll(textFileLoader("src\\main\\resources\\AllTextData\\Inventory.txt"));
-
-
-        showAllItemsTableView.getItems().addAll(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\Inventory.txt"));
+        showAllItemsTableView.setItems(textFileLoader("BangladeshCricketBoard_Group78_IUB_Autumn24\\SimulatingOperationsOfBangladeshCricketBoard\\src\\main\\resources\\AllTextData\\Inventory.txt"));
     }
+
     public ObservableList<Inventory> textFileLoader(String filePath) {
         ObservableList<Inventory> list = FXCollections.observableArrayList();
         try {
@@ -67,8 +58,10 @@ public class LogisticInventoryShowAllItemsController {
         return list;
     }
 
+        
+
     @FXML
-    void inventoryLoadOnAction(ActionEvent event) {
+    void inventoryLoadOnActionButton(ActionEvent event) {
         String search = searchTextField.getText().toLowerCase();
         if (search.isEmpty()) {
             showAllItemsTableView.getItems().clear();
@@ -89,4 +82,6 @@ public class LogisticInventoryShowAllItemsController {
         showAllItemsTableView.getItems().clear();
         showAllItemsTableView.getItems().addAll(list);
     }
+        
 }
+
